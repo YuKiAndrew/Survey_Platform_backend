@@ -1,0 +1,82 @@
+/* front-end back-end communication configuration */
+{
+    /* 上传图片配置项 */
+    "imageActionName": "uploadimage", /*  */
+    "imageFieldName": "upfile", /* image name */
+    "imageMaxSize": 2048000, /* upload size */
+    "imageAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"], /* image file type */
+    "imageCompressEnable": true, /* is it compressed image */
+    "imageCompressBorder": 1600, /*  */
+    "imageInsertAlign": "none", /*  */
+    "imageUrlPrefix": "http://localhost:8081/", /*  */
+    "imagePathFormat": "/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}", /* save address */
+                                /* */
+
+    "scrawlActionName": "uploadscrawl",
+    "scrawlFieldName": "upfile",
+    "scrawlPathFormat": "/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}",
+    "scrawlMaxSize": 2048000, /* the limit of the upload file */
+    "scrawlUrlPrefix": "http://localhost:8081/", /* image query prefix */
+    "scrawlInsertAlign": "none",
+
+    /* snap screen photo */
+    "snapscreenActionName": "uploadimage", /*  */
+    "snapscreenPathFormat": "/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}", /* save url */
+    "snapscreenUrlPrefix": "", /* visitor prefix */
+    "snapscreenInsertAlign": "none", /* photo floating*/
+
+    /* remote photo */
+    "catcherLocalDomain": ["127.0.0.1", "localhost", "img.baidu.com"],
+    "catcherActionName": "catchimage", /* action name*/
+    "catcherFieldName": "source", /* table name*/
+    "catcherPathFormat": "/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}", /* save path */
+    "catcherUrlPrefix": "http://localhost:8081/", /* photo visitor prefix */
+    "catcherMaxSize": 2048000, /* photo size limitation */
+    "catcherAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"], /* suffix */
+
+    /* video upload */
+    "videoActionName": "uploadvideo", /* upload action name */
+    "videoFieldName": "upfile", /* upload table name */
+    "videoPathFormat": "/ueditor/jsp/upload/video/{yyyy}{mm}{dd}/{time}{rand:6}", /* save path */
+    "videoUrlPrefix": "http://localhost:8081/", /* video prefix */
+    "videoMaxSize": 102400000, /* video size limitation */
+    "videoAllowFiles": [
+        ".flv", ".swf", ".mkv", ".avi", ".rm", ".rmvb", ".mpeg", ".mpg",
+        ".ogg", ".ogv", ".mov", ".wmv", ".mp4", ".webm", ".mp3", ".wav", ".mid"], /* upload video type */
+
+    /* upload file configuration */
+    "fileActionName": "uploadfile", /* upload action */
+    "fileFieldName": "upfile", /* upload action name */
+    "filePathFormat": "/ueditor/jsp/upload/file/{yyyy}{mm}{dd}/{time}{rand:6}", /* save path */
+    "fileUrlPrefix": "http://localhost:8081/", /* file prefix */
+    "fileMaxSize": 51200000, /* upload size limitation */
+    "fileAllowFiles": [
+        ".png", ".jpg", ".jpeg", ".gif", ".bmp",
+        ".flv", ".swf", ".mkv", ".avi", ".rm", ".rmvb", ".mpeg", ".mpg",
+        ".ogg", ".ogv", ".mov", ".wmv", ".mp4", ".webm", ".mp3", ".wav", ".mid",
+        ".rar", ".zip", ".tar", ".gz", ".7z", ".bz2", ".cab", ".iso",
+        ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".pdf", ".txt", ".md", ".xml"
+    ], /* file type */
+
+    /* image manage */
+    "imageManagerActionName": "listimage", /* photo manage action */
+    "imageManagerListPath": "/ueditor/jsp/upload/image/", /* save path */
+    "imageManagerListSize": 20, /* list size */
+    "imageManagerUrlPrefix": "", /* save path */
+    "imageManagerInsertAlign": "none", /*  */
+    "imageManagerAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"], /* file type */
+
+    /* list files under specific path */
+    "fileManagerActionName": "listfile", /* file management action */
+    "fileManagerListPath": "/ueditor/jsp/upload/file/", /* save path */
+    "fileManagerUrlPrefix": "http://localhost:8081/", /* file visitor prefix */
+    "fileManagerListSize": 20, /* list amount */
+    "fileManagerAllowFiles": [
+        ".png", ".jpg", ".jpeg", ".gif", ".bmp",
+        ".flv", ".swf", ".mkv", ".avi", ".rm", ".rmvb", ".mpeg", ".mpg",
+        ".ogg", ".ogv", ".mov", ".wmv", ".mp4", ".webm", ".mp3", ".wav", ".mid",
+        ".rar", ".zip", ".tar", ".gz", ".7z", ".bz2", ".cab", ".iso",
+        ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".pdf", ".txt", ".md", ".xml"
+    ] /* file type */
+
+}

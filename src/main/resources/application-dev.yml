@@ -1,0 +1,98 @@
+dwsurvey:
+  site: 'local'
+  web:
+    file-path: dwfile/dwsurvey/
+    static-type: static
+    site-url: http://localhost:8081
+    resource-url: http://localhost:8080
+    info:
+      site-name: 调问网
+      site-url: http://www.diaowen.net
+      site-mail: service@diaowen.net
+      site-phone: 18888888888
+      site-icp: aaa
+  weixin:
+    app-id: xxx
+    app-secret: xxx
+    server:
+      token: xxx
+      encodingAESKey:
+  version:
+    info: DWSurvey OSS V5.4.0 Boot
+    number: OSS V5.4.0
+    built: 2023/04/15
+server:
+  port: 8080
+
+spring:
+  # json处理
+  jackson:
+    # 时间编码格式
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  # spring web 配置
+  web:
+    resources:
+      static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${dwsurvey.web.file-path}
+  datasource:
+    url: jdbc:mysql://localhost:3306/dwsurvey?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 50
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      remove-abandoned-timeout-millis: 300000
+      validation-query: SELECT 1
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      filters: stat,wall
+      connection-properties: druid.stat.mergeSql\=true;druid.stat.slowSqlMillis\=5000
+      stat-view-servlet:
+        enabled: false
+        reset-enable: false
+        deny: 192.168.0.3
+        allow: 'localhost'
+        url-pattern: /druid/*
+        # 上生产环境一定要改账号与密码！
+        login-username: admin
+        login-password: dwsdb123456
+  # jpa配置
+  jpa:
+    database: mysql
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      # naming:
+      #  implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl #指定jpa的自动表生成策略，驼峰自动映射为下划线格式
+    properties:
+      hibernate:
+
+        show_sql: true
+        #是否格式化sql语句
+        format_sql: false
+        #事务交由spring管理
+        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+        #        enable_lazy_load_no_trans: true
+        cache:
+          use_second_level_cache: false
+          use_query_cache: false
+  main:
+    allow-circular-references: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+logging:
+  level:
+    net:
+      diaowen: INFO
+    org:
+      hibernate: ERROR
+      apache: ERROR
