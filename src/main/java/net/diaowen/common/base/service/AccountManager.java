@@ -1,6 +1,5 @@
 package net.diaowen.common.base.service;
 
-import java.util.Date;
 import java.util.List;
 
 import net.diaowen.common.base.entity.User;
@@ -19,8 +18,6 @@ import net.diaowen.common.utils.security.DigestUtils;
 
 /**
  *
- * @author KeYuan
- * @date 2013下午10:22:04
  *
  */
 @Service
@@ -32,23 +29,22 @@ public class AccountManager {
 	private UserDao userDao;
 
 //	@Autowired
-//	private NotifyMessageProducer notifyMessageProducer;//JMS消息推送
+//	private NotifyMessageProducer notifyMessageProducer;
 
 	private ShiroDbRealm shiroRealm;
 
 	/**
-	 * 在保存用户时,发送用户修改通知消息, 由消息接收者异步进行较为耗时的通知邮件发送.
-	 *
-	 * 如果企图修改超级用户,取出当前操作员用户,打印其信息然后抛出异常.
+	 When saving a user, send a user modification notification message. The message recipient will asynchronously handle the time-consuming task of sending notification emails.
+
+	 If there is an attempt to modify a superuser, retrieve the current operator user, print their information, and then throw an exception.
 	 *
 	 */
-	// 演示指定非默认名称的TransactionManager.
 	@Transactional
 	public void saveUser(User user) {
 		if (isSupervisor(user)) {
-			logger.warn("操作员{}尝试修改超级管理员用户", SecurityUtils.getSubject()
+			logger.warn("personnel {} change admin account", SecurityUtils.getSubject()
 					.getPrincipal());
-			throw new ServiceException("不能修改超级管理员用户");
+			throw new ServiceException("can not change admin account");
 		}
 		//判断是否有重复用户
 		String shaPassword = DigestUtils.sha1Hex(user.getPlainPassword());
@@ -68,8 +64,8 @@ public class AccountManager {
 	@Transactional
 	public void saveUp(User user){
 		if (isSupervisor(user)) {
-			logger.warn("操作员{}尝试修改超级管理员用户", SecurityUtils.getSubject().getPrincipal());
-			throw new ServiceException("不能修改超级管理员用户");
+			logger.warn("personnel {} change admin account", SecurityUtils.getSubject().getPrincipal());
+			throw new ServiceException("can not change admin account");
 		}
 		userDao.save(user);
 	}
@@ -79,7 +75,6 @@ public class AccountManager {
 		User user = getCurUser();
 		if(user!=null){
 			if(curpwd!=null && newPwd!=null){
-				//判断是否有重复用户
 				String curShaPassword = DigestUtils.sha1Hex(curpwd);
 				if(user.getShaPassword().equals(curShaPassword)){
 					String shaPassword = DigestUtils.sha1Hex(newPwd);
@@ -102,9 +97,7 @@ public class AccountManager {
 //	}
 
 
-	/**
-	 * 判断是否超级管理员.
-	 */
+
 	private boolean isSupervisor(User user) {
 //		return (user.getId() != null && user.getId() == 1L);
 		return false;
@@ -144,19 +137,13 @@ public class AccountManager {
 		return null;
 	}
 
-	/**
-	 * 检查用户名是否唯一.
-	 *
-	 * @return loginName在数据库中唯一或等于oldLoginName时返回true.
-	 */
+
 	@Transactional(readOnly = true)
 	public boolean isLoginNameUnique(String newLoginName, String oldLoginName) {
 		return userDao.isPropertyUnique("loginName", newLoginName, oldLoginName);
 	}
 
-	/**
-	 * 取出当前登陆用户
-	 */
+
 	public User getCurUser(){
 		Subject subject=SecurityUtils.getSubject();
 

@@ -15,7 +15,7 @@ import java.io.File;
 import java.util.Hashtable;
 
 /**
- * Created by keyuan on 2018/9/8.
+ * Created by ymx on 2018/9/8.
  */
 public class ZxingUtil {
 

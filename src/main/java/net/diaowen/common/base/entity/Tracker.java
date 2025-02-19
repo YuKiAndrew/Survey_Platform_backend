@@ -5,12 +5,7 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-/**
- * 
- * @author KeYuan
- * @date 2013下午10:01:45
- *
- */
+
 @Entity
 @Table(name = "tracker")
 public class Tracker extends IdEntity {

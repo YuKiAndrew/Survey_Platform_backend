@@ -15,9 +15,8 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 import com.google.common.collect.Lists;
 
 /**
- * 与具体ORM实现无关的分页查询结果封装.
- * 
- * @param <T> Page中记录的类型.
+ * Pagination query result encapsulation
+ *
  *
  */
 public class Page<T> extends PageRequest implements Iterable<T> {
@@ -37,28 +36,28 @@ public class Page<T> extends PageRequest implements Iterable<T> {
 	}
 
 	/**
-	 * 获得页内的记录列表.
+	 * Get the list of records within the page.
 	 */
 	public List<T> getResult() {
 		return result;
 	}
 
 	/**
-	 * 设置页内的记录列表.
+	 * Set the list of records within the page.
 	 */
 	public void setResult(final List<T> result) {
 		this.result = result;
 	}
 
 	/**
-	 * 获得总记录数, 默认值为-1.
+	 * Get total number of records
 	 */
 	public long getTotalItems() {
 		return totalItems;
 	}
 
 	/**
-	 * 设置总记录数.
+	 * Set total number of records
 	 */
 	public void setTotalItems(final long totalItems) {
 		this.totalItems = totalItems;
@@ -67,7 +66,7 @@ public class Page<T> extends PageRequest implements Iterable<T> {
 	}
 
 	/** 
-	 * 实现Iterable接口, 可以for(Object item : page)遍历使用
+	 * Utilize the iterator
 	 */
 	@Override
 	public Iterator<T> iterator() {
@@ -75,7 +74,7 @@ public class Page<T> extends PageRequest implements Iterable<T> {
 	}
 
 	/**
-	 * 根据pageSize与totalItems计算总页数.
+	 * get the totalpage number
 	 */
 	public int getTotalPages() {
 		return (int) Math.ceil((double) totalItems / (double) getPageSize());
@@ -83,22 +82,18 @@ public class Page<T> extends PageRequest implements Iterable<T> {
 	}
 
 	/**
-	 * 是否还有下一页.
+	 * The next page function
 	 */
 	public boolean hasNextPage() {
 		return (getPageNo() + 1 <= getTotalPages());
 	}
 
-	/**
-	 * 是否最后一页.
-	 */
 	public boolean isLastPage() {
 		return !hasNextPage();
 	}
 
 	/**
-	 * 取得下页的页号, 序号从1开始.
-	 * 当前页为尾页时仍返回尾页序号.
+	 * obtain the next page
 	 */
 	public int getNextPage() {
 		if (hasNextPage()) {
@@ -108,24 +103,15 @@ public class Page<T> extends PageRequest implements Iterable<T> {
 		}
 	}
 
-	/**
-	 * 是否还有上一页.
-	 */
 	public boolean hasPrePage() {
 		return (getPageNo() > 1);
 	}
 
-	/**
-	 * 是否第一页.
-	 */
 	public boolean isFirstPage() {
 		return !hasPrePage();
 	}
 
-	/**
-	 * 取得上页的页号, 序号从1开始.
-	 * 当前页为首页时返回首页序号.
-	 */
+
 	public int getPrePage() {
 		if (hasPrePage()) {
 			return getPageNo() - 1;
@@ -135,9 +121,7 @@ public class Page<T> extends PageRequest implements Iterable<T> {
 	}
 
 	/**
-	 * 计算以当前页为中心的页面列表,如"首页,23,24,25,26,27,末页"
-	 * @param count 需要计算的列表大小
-	 * @return pageNo列表 
+	 * calcualte the page number
 	 */
 	public List<Integer> getSlider(int count) {
 		int halfSize = count / 2;

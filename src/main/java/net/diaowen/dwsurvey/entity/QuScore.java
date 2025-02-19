@@ -9,7 +9,7 @@ import net.diaowen.common.base.entity.IdEntity;
 /**
  * 评分题 行选项
  *
- * @author KeYuan
+ * @author ymx
  * @date 2013下午12:14:26
  *
  * 

@@ -9,7 +9,7 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 具体的一次调查
- * @author keyuan
+ * @author ymx
  *
  * 
  * http://dwsurvey.net

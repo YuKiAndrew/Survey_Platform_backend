@@ -19,17 +19,14 @@ import org.apache.commons.lang.StringUtils;
 import net.diaowen.common.utils.ReflectionUtils;
 
 /**
- * 提出集合中的元素对象的属性(通过Getter函数),组合成新的集合.
+ * Extract the attributes of elements in a collection (via getter functions) and combine them into a new collection.
  *
  */
 public class CollectionMapper {
 
 	/**
-	 * 提取集合中的对象的属性(通过Getter函数), 组合成Map.
-	 * 
-	 * @param collection 来源集合.
-	 * @param keyPropertyName 要提取为Map中的Key值的属性名.
-	 * @param valuePropertyName 要提取为Map中的Value值的属性名.
+	 * Extract the attributes of objects in a collection (via getter functions) and combine them into a Map.
+	 *
 	 */
 	public static Map extractToMap(final Collection collection, final String keyPropertyName,
 			final String valuePropertyName) {
@@ -48,10 +45,8 @@ public class CollectionMapper {
 	}
 
 	/**
-	 * 提取集合中的对象的属性(通过Getter函数), 组合成List.
-	 * 
-	 * @param collection 来源集合.
-	 * @param propertyName 要提取的属性名.
+	 * Extract the attributes of objects in a collection (via getter functions) and combine them into a List.
+	 *
 	 */
 	public static List extractToList(final Collection collection, final String propertyName) {
 		List list = new ArrayList();
@@ -68,11 +63,8 @@ public class CollectionMapper {
 	}
 
 	/**
-	 * 提取集合中的对象的属性(通过Getter函数), 组合成由分割符分隔的字符串.
-	 * 
-	 * @param collection 来源集合.
-	 * @param propertyName 要提取的属性名.
-	 * @param separator 分隔符.
+	 * Extract the attributes of objects in a collection (via getter functions) and combine them into a string separated by a delimiter.
+	 *
 	 */
 	public static String extractToString(final Collection collection, final String propertyName, final String separator) {
 		List list = extractToList(collection, propertyName);

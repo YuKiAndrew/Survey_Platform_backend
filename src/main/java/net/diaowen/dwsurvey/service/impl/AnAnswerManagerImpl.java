@@ -12,8 +12,8 @@ import org.springframework.stereotype.Service;
 import net.diaowen.common.service.BaseServiceImpl;
 
 /**
- * @author keyuan
- * keyuan258@gmail.com
+ * @author ymx
+ * ymx258@gmail.com
  *
  */
 

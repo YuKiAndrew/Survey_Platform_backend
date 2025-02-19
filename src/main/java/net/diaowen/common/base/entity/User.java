@@ -1,28 +1,16 @@
 package net.diaowen.common.base.entity;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
 
 import net.diaowen.common.plugs.mapper.CollectionMapper;
 
-/**
- *
- * @author KeYuan
- * @date 2013下午10:02:00
- *
- */
+
 @Entity
 @Table(name = "t_user")
 public class User extends IdEntity {

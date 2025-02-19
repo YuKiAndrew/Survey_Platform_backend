@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import net.diaowen.common.base.entity.IdEntity;
 /**
  * 用作备分
- * @author keyuan
+ * @author ymx
  *
  * 
  * http://dwsurvey.net

@@ -14,8 +14,7 @@ import org.springframework.stereotype.Repository;
 /**
  * @author ymx
  *
- * 
- * http://dwsurvey.net
+ *
  */
 @Repository
 public class UserDaoImpl extends BaseDaoImpl<User, String> implements UserDao{

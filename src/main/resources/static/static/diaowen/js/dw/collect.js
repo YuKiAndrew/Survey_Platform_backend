@@ -3,7 +3,7 @@
  * DWSurvey 3.0
  *
  * @desc: 收集问卷设置
- * @author: keyuan（@keyuan, keyuan258@gmail.com）
+ * @author: ymx（@ymx, ymx258@gmail.com）
  *  
  *
  * Copyright 2012, 2017 调问问卷(DWSurvey,http://dwsurvey.net)

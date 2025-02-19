@@ -20,27 +20,26 @@ import com.google.common.collect.Lists;
 import net.diaowen.common.utils.ReflectionUtils;
 
 /**
- * 对象转换工具类.
- * 1.封装Dozer, 深度转换对象到对象
- * 2.封装Apache Commons BeanUtils, 将字符串转换为对象.
+ Encapsulates Dozer for deep object-to-object conversion.
+ Encapsulates Apache Commons BeanUtils for converting strings to objects.
  *
  */
 public abstract class ObjectMapper {
 
 	/**
-	 * 持有Dozer单例, 避免重复创建DozerMapper消耗资源.
+	 * Hold a singleton instance of Dozer to avoid the resource consumption of repeatedly creating DozerMapper.
 	 */
 	private static DozerBeanMapper dozer = new DozerBeanMapper();
 
 	/**
-	 * 基于Dozer转换对象的类型.
+	 * Convert object types based on Dozer.
 	 */
 	public static <T> T map(Object source, Class<T> destinationClass) {
 		return dozer.map(source, destinationClass);
 	}
 
 	/**
-	 * 基于Dozer转换Collection中对象的类型.
+	 * Convert the types of objects in a Collection based on Dozer.
 	 */
 	public static <T> List<T> mapList(Collection sourceList, Class<T> destinationClass) {
 		List<T> destinationList = Lists.newArrayList();
@@ -57,7 +56,7 @@ public abstract class ObjectMapper {
 	}
 
 	/**
-	 * 定义Apache BeanUtils日期Converter的格式,可注册多个格式,以','分隔
+	 * Define the format for Apache BeanUtils DateConverter, allowing multiple formats to be registered, separated by ','.
 	 */
 	public static void registerDateConverter(String patterns) {
 		DateConverter dc = new DateConverter();
@@ -67,10 +66,8 @@ public abstract class ObjectMapper {
 	}
 
 	/**
-	 * 基于Apache BeanUtils转换字符串到相应类型.
+	 * Convert strings to the corresponding types based on Apache BeanUtils.
 	 *
-	 * @param value 待转换的字符串.
-	 * @param toType 转换目标类型.
 	 */
 	public static Object convertToObject(String value, Class<?> toType) {
 		Object cvt_value=null;

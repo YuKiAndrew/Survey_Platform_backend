@@ -15,7 +15,7 @@ import net.diaowen.common.QuType;
 
 /**
  *
- * @author keyuan
+ * @author ymx
  *
  * 
  * http://dwsurvey.net

@@ -1,7 +1,7 @@
 package net.diaowen.dwsurvey.entity;
 /**
  * 配置
- * @author keyuan
+ * @author ymx
  *
  *
  * http://dwsurvey.net

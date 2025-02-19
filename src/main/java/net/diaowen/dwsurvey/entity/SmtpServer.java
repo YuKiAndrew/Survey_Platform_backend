@@ -4,7 +4,7 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 系统smtp服务器
- * @author KeYuan
+ * @author ymx
  * @date 2013下午10:35:52
  *
  * 

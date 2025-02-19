@@ -12,7 +12,7 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 单个问卷的全局统计信息
- * @author KeYuan
+ * @author ymx
  * @date 2013下午6:48:25
  *
  * 

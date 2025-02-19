@@ -10,7 +10,7 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 题目逻辑设置
- * @author KeYuan
+ * @author ymx
  * @date 2014下午9:23:21
  *
  * 

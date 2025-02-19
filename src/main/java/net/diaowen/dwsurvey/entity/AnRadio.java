@@ -8,7 +8,7 @@ import net.diaowen.common.base.entity.IdEntity;
 /**
  * 答卷 单选题保存表
  *
- * @author keyuan
+ * @author ymx
  * @date 2012-10-21下午9:26:43
  *
  * 

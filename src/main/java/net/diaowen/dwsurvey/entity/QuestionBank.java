@@ -11,7 +11,7 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 题库
- * @author KeYuan
+ * @author ymx
  * @date 2013下午9:46:29
  *
  * 

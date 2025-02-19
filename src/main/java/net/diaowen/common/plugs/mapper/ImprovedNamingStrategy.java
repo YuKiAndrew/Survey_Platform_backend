@@ -6,8 +6,7 @@ import org.hibernate.boot.model.naming.PhysicalNamingStrategy;
 import org.hibernate.engine.jdbc.env.spi.JdbcEnvironment;
 
 /**
- * @author 向亚林
- * 2018/2/9 16:53
+ * @author ymx
  */
 public class ImprovedNamingStrategy implements PhysicalNamingStrategy {
 

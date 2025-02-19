@@ -7,7 +7,7 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 评分题
- * @author KeYuan
+ * @author ymx
  * @date 2013下午8:48:24
  *
  * 

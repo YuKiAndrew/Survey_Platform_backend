@@ -18,15 +18,9 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.Map;
 
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
-
 /**
  *
 * @ClassName: SuperHttpDao
-* @Description: TODO(http请求超类，http请求更高级原始的封装)
-* @author keyuan
-* @date 2016年9月17日 上午11:22:21
 *
  */
 @Component

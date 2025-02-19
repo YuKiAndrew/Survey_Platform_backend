@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * 系统日志
- * @author keyuan
+ * @author ymx
  *
  * 
  * http://dwsurvey.net

@@ -9,7 +9,7 @@ import net.diaowen.common.CheckType;
 
 /**
  * 单选题选项
- * @author keyuan
+ * @author ymx
  *
  *
  * http://dwsurvey.net

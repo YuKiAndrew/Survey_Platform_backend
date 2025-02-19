@@ -14,7 +14,7 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 问卷目录及问卷
- * @author keyuan
+ * @author ymx
  *
  * 
  * http://dwsurvey.net

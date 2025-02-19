@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import net.diaowen.common.base.entity.IdEntity;
 /**
  * 系统邮件
- * @author keyuan
+ * @author ymx
  *
  * 
  * http://dwsurvey.net

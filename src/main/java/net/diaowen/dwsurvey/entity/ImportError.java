@@ -10,7 +10,7 @@ import net.diaowen.common.base.entity.IdEntity;
 /**
  * 答案 是非题结果保存表
  *
- * @author keyuan
+ * @author ymx
  * @date 2012-10-21下午9:26:10
  *
  *

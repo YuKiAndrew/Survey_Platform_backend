@@ -1,11 +1,11 @@
 package net.diaowen.common.plugs.email;
 
 public class Email {
-	private String to;// 收件人
-	private String subject;// 主题
-	private String username;// 用户称呼
-	private String content;// 内容
-	private String date;// 日期
+	private String to;
+	private String subject;
+	private String username;
+	private String content;
+	private String date;
 	private String sendEmailId;
 
 	public Email() {

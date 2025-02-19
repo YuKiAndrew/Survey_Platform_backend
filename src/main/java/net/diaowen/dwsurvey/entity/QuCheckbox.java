@@ -10,7 +10,7 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 多选题 选项表
- * @author keyuan
+ * @author ymx
  *
  * 
  * http://dwsurvey.net
