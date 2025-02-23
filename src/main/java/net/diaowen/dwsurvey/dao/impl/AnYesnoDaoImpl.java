@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao.impl;
 
 import java.util.ArrayList;
@@ -17,9 +18,9 @@ import net.diaowen.dwsurvey.entity.QuRadio;
 
 /**
  * 是非题 dao
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- *
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 
@@ -246,3 +247,4 @@ public class AnYesnoDaoImpl extends BaseDaoImpl<AnYesno, String> implements AnYe
 	}
 
 }
+

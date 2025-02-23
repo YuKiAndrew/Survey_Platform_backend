@@ -11,7 +11,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
+<<<<<<< HEAD
  * Created by ymx on 2019/8/5.
+=======
+ * Created by keyuan on 2019/8/5.
+>>>>>>> 2593c893586618bcd925c3c27214e9edaacb9b4f
  */
 public class DwsUtils {
 

@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.entity;
 
 import javax.persistence.Entity;
@@ -10,7 +11,7 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  *
  */
@@ -31,6 +32,13 @@ public class QuMultiFillblank extends IdEntity{
 	//是否显示  0不显示
 	private Integer visibility=1;
 
+	public QuMultiFillblank(){
+
+	}
+	public QuMultiFillblank(String optionTitle, String optionName){
+		this.optionTitle = optionTitle;
+		this.optionName = optionName;
+	}
 	public String getQuId() {
 		return quId;
 	}
@@ -78,3 +86,4 @@ public class QuMultiFillblank extends IdEntity{
 		this.anCount = anCount;
 	}
 }
+

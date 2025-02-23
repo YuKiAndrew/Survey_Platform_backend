@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service;
 
 import java.util.List;
@@ -9,9 +10,9 @@ import net.diaowen.dwsurvey.entity.Question;
 
 /**
  * 多项填空题
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 public interface AnDFillblankManager extends BaseService<AnDFillblank, String>{
@@ -21,3 +22,4 @@ public interface AnDFillblankManager extends BaseService<AnDFillblank, String>{
 
     Page<AnDFillblank> findPage(Page<AnDFillblank> anPage, String quItemId);
 }
+

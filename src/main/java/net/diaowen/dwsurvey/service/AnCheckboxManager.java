@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service;
 
 import java.util.List;
@@ -9,9 +10,9 @@ import net.diaowen.dwsurvey.entity.Question;
 
 /**
  * 多选题业务
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 
@@ -25,3 +26,4 @@ public interface AnCheckboxManager extends BaseService<AnCheckbox, String>{
 
 	public List<DataCross> findStatsDataChart(Question question);
 }
+

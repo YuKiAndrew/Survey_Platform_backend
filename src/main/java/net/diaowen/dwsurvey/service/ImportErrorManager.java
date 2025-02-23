@@ -1,12 +1,13 @@
+
 package net.diaowen.dwsurvey.service;
 
 import net.diaowen.dwsurvey.entity.ImportError;
 
 /**
  * 导入错误记录
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 public interface ImportErrorManager {
@@ -14,3 +15,4 @@ public interface ImportErrorManager {
     void save(ImportError importError);
 
 }
+

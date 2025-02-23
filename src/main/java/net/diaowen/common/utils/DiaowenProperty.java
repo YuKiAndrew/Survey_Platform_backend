@@ -10,7 +10,9 @@ import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 
 /**
  *
- * @author ymx
+
+ * @author keyuan
+
  *
  */
 public class DiaowenProperty extends

@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service;
 
 import net.diaowen.common.base.entity.User;
@@ -30,4 +31,9 @@ public interface UserManager extends BaseService<User, String>{
 	public HttpResult upData(User user);
 
 	public void deleteData(String[] ids);
+
+	public User findBySessionId(String servletSessionId);
+
+	public User findByOpenId(String wxOpenId);
 }
+

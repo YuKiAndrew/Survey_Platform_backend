@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao;
 
 import java.util.List;
@@ -9,9 +10,9 @@ import net.diaowen.dwsurvey.entity.Question;
 
 /**
  * 是非题 interface
- * @author ymx
+ * @author KeYuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  *
  */
@@ -24,3 +25,4 @@ public interface AnYesnoDao extends BaseDao<AnYesno, String>{
 	public List<DataCross> findStatsDataChart(Question question);
 
 }
+

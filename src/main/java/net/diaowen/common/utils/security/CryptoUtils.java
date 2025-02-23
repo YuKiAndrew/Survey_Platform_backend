@@ -1,3 +1,4 @@
+
 /**
  * Copyright (c) 2005-2011 springside.org.cn
  *
@@ -7,19 +8,14 @@
  */
 package net.diaowen.common.utils.security;
 
-import java.security.GeneralSecurityException;
-import java.util.Arrays;
-
-import javax.crypto.Cipher;
-import javax.crypto.KeyGenerator;
-import javax.crypto.Mac;
-import javax.crypto.SecretKey;
-import javax.crypto.SecretKeyFactory;
-import javax.crypto.spec.DESKeySpec;
-import javax.crypto.spec.SecretKeySpec;
-
 import net.diaowen.common.utils.EncodeUtils;
 import net.diaowen.common.utils.ExceptionUtils;
+
+import javax.crypto.*;
+import javax.crypto.spec.DESKeySpec;
+import javax.crypto.spec.SecretKeySpec;
+import java.security.GeneralSecurityException;
+import java.util.Arrays;
 
 /**
  * 支持HMAC-SHA1消息签名 及 DES/AES对称加密的工具类.
@@ -305,4 +301,5 @@ public abstract class CryptoUtils {
 	public static String generateAesHexKey() {
 		return EncodeUtils.encodeHex(generateAesKey());
 	}
+
 }

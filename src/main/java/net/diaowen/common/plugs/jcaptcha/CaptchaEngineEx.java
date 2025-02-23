@@ -1,3 +1,4 @@
+
 package net.diaowen.common.plugs.jcaptcha;
 
 import java.awt.Color;

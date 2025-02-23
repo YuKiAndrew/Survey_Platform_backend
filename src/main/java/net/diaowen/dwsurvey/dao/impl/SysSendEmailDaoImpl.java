@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao.impl;
 
 import net.diaowen.dwsurvey.dao.SysSendEmailDao;
@@ -10,3 +11,4 @@ import net.diaowen.dwsurvey.entity.SysSendEmail;
 public class SysSendEmailDaoImpl extends BaseDaoImpl<SysSendEmail, String> implements SysSendEmailDao {
 
 }
+

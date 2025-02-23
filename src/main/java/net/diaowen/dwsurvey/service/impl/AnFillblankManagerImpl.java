@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import net.diaowen.common.plugs.page.Page;
@@ -14,10 +15,10 @@ import net.diaowen.common.service.BaseServiceImpl;
 
 /**
  * 填空题
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
- * 
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service
 public class AnFillblankManagerImpl extends BaseServiceImpl<AnFillblank, String> implements AnFillblankManager {
@@ -51,3 +52,4 @@ public class AnFillblankManagerImpl extends BaseServiceImpl<AnFillblank, String>
 	}
 	
 }
+

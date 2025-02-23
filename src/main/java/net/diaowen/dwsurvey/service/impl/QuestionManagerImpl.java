@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import java.util.ArrayList;
@@ -33,8 +34,11 @@ import javax.persistence.criteria.Root;
 
 
 /**
- * @author ymx
+ * 基础题
+ * @author keyuan(keyuan258@gmail.com)
  *
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service("questionManager")
 public class QuestionManagerImpl extends BaseServiceImpl<Question, String> implements QuestionManager{
@@ -467,3 +471,4 @@ public class QuestionManagerImpl extends BaseServiceImpl<Question, String> imple
 	}
 
 }
+

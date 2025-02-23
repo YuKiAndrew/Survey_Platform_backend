@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service;
 
 import java.util.List;
@@ -8,9 +9,9 @@ import net.diaowen.dwsurvey.entity.SurveyDirectory;
 
 /**
  * 题基础
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 public interface QuestionManager extends BaseService<Question, String>{
@@ -42,3 +43,4 @@ public interface QuestionManager extends BaseService<Question, String>{
 	public void update(Question entity);
 	
 }
+

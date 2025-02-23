@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.entity;
 
 import javax.persistence.Entity;
@@ -7,10 +8,10 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  *
- * @author ymx
+ * @author KeYuan
  * @date 2014下午8:41:44
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 @Entity
@@ -372,3 +373,4 @@ public class SurveyStyle extends IdEntity{
 
 
 }
+

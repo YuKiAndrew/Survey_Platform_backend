@@ -125,6 +125,8 @@ public class ZipUtil {
     }
 
     public static void main(String[] args) {
-//        ZipUtil.createZip("/Users/ymx/Documents/GIT/my-gitlab/dw/dwsurvey_b1/dwsurvey/target/dwsurvey/file/402880e864e15c150164e3917b930000", "/Users/ymx/Documents/GIT/my-gitlab/dw/dwsurvey_b1/dwsurvey/target/dwsurvey/file/402880e864e15c150164e3917b930000.zip",false);
+
+//        ZipUtil.createZip("/Users/keyuan/Documents/GIT/my-gitlab/dw/dwsurvey_b1/dwsurvey/target/dwsurvey/file/402880e864e15c150164e3917b930000", "/Users/keyuan/Documents/GIT/my-gitlab/dw/dwsurvey_b1/dwsurvey/target/dwsurvey/file/402880e864e15c150164e3917b930000.zip",false);
+
     }
 }

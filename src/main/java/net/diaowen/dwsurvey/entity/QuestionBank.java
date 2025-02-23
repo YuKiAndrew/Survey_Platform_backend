@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.entity;
 
 import java.util.Date;
@@ -11,10 +12,10 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 题库
- * @author ymx
+ * @author KeYuan
  * @date 2013下午9:46:29
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 @Entity
@@ -138,3 +139,4 @@ public class QuestionBank extends IdEntity{
 	}
 
 }
+

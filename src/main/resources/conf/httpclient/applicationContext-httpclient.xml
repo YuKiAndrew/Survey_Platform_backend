@@ -9,23 +9,22 @@
 
 	<description>httpClient配置</description>
 
-	<!-- define connector manager -->
+	<!-- 定义连接管理器 -->
 	<bean id="httpClientConnectionManager"
 		class="org.apache.http.impl.conn.PoolingHttpClientConnectionManager"
 		destroy-method="close">
-		<!-- the maximum connections -->
+		<!-- 最大连接数 -->
 		<property name="maxTotal" value="10000" />
-		<!-- concurrent amount -->
+		<!-- 设置每个主机地址的并发数 -->
 		<property name="defaultMaxPerRoute" value="300" />
 	</bean>
 
  	<bean id="redirectStrategy" class="org.apache.http.impl.client.LaxRedirectStrategy"></bean>
 
-	<!-- httpclient builder -->
+	<!-- httpclient对象构建器 -->
 	<bean id="httpClientBuilder" class="org.apache.http.impl.client.HttpClientBuilder">
-		<!-- set up http client connection manager -->
+		<!-- 设置连接管理器 -->
 		<property name="connectionManager" ref="httpClientConnectionManager" />
-		<!-- set up the redirect strategy -->
 		<property name="redirectStrategy" ref="redirectStrategy"/>
 		<!--开启重试-->
 		<property name="retryHandler">
@@ -35,10 +34,10 @@
 		</property>
 	</bean>
 
-	<!-- define http client bean -->
+	<!-- 定义Httpclient对象 -->
 	<bean id="httpClient" factory-bean="httpClientBuilder" factory-method="build" scope="prototype" />
 
-	<!-- clean invalid connection -->
+	<!-- 定义清理无效连接 -->
 	<bean class="net.diaowen.common.plugs.httpclient.IdleConnectionEvictor"
 		destroy-method="shutdown">
 		<constructor-arg index="0" ref="httpClientConnectionManager" />
@@ -80,6 +79,9 @@
         cron="0 0 1 * * ?" //每天晚上0点
         0/10 * * * * ?
      -->
-
+	<task:scheduled-tasks>
+		<task:scheduled ref="taskService" method="taskRefAccessToken" cron="0 0/115 * * * ?" />
+		<task:scheduled ref="taskService" method="checkVersion" cron="0 0 1 * * ?" />
+	</task:scheduled-tasks>
 
 </beans>

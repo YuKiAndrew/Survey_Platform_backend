@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.entity;
 
 import java.util.Date;
@@ -9,7 +10,7 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  *  邮件服务
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 @Entity
@@ -146,3 +147,4 @@ public class SurveyMailInvite extends IdEntity{
 	}
 
 }
+

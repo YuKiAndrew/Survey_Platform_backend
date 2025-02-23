@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.entity;
 
 import javax.persistence.Entity;
@@ -7,10 +8,10 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 答卷  多行填空题保存表
- * @author ymx
+ * @author keyuan
  * @date 2012-10-21下午9:26:43
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 @Entity
@@ -80,3 +81,4 @@ public class AnDFillblank extends IdEntity{
 
 
 }
+

@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service;
 
 import java.util.List;
@@ -8,9 +9,9 @@ import net.diaowen.dwsurvey.entity.Question;
 
 /**
  * 评分题
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 public interface AnScoreManager extends BaseService<AnScore, String>{
@@ -18,3 +19,4 @@ public interface AnScoreManager extends BaseService<AnScore, String>{
 
 	public void findGroupStats(Question question);
 }
+

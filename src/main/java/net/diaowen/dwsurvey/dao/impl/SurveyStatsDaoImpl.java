@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao.impl;
 
 import net.diaowen.dwsurvey.entity.SurveyStats;
@@ -10,9 +11,9 @@ import net.diaowen.dwsurvey.entity.Question;
 
 /**
  * 问卷统计 dao
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- *
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 
@@ -62,3 +63,4 @@ public class SurveyStatsDaoImpl extends BaseDaoImpl<SurveyStats, String> impleme
 	}
 	
 }
+

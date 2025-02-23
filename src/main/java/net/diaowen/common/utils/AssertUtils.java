@@ -1,3 +1,4 @@
+
 /**
  * Copyright (c) 2005-2011 springside.org.cn
  *
@@ -431,3 +432,4 @@ public abstract class AssertUtils {
 		state(expression, "[Assertion failed] - this state invariant must be true");
 	}
 }
+

@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service;
 
 import net.diaowen.common.plugs.page.Page;
@@ -7,9 +8,9 @@ import net.diaowen.dwsurvey.entity.Question;
 
 /**
  * 填空题
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 public interface AnFillblankManager extends BaseService<AnFillblank, String>{
@@ -19,3 +20,4 @@ public interface AnFillblankManager extends BaseService<AnFillblank, String>{
 
 	Page<AnFillblank> findPage(Page<AnFillblank> page, String quId);
 }
+

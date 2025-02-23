@@ -1,3 +1,4 @@
+
 /**
  * Copyright (c) 2005-2011 springside.org.cn
  *
@@ -7,13 +8,13 @@
  */
 package net.diaowen.common.utils.security;
 
+import net.diaowen.common.utils.EncodeUtils;
+import net.diaowen.common.utils.ExceptionUtils;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.GeneralSecurityException;
 import java.security.MessageDigest;
-
-import net.diaowen.common.utils.EncodeUtils;
-import net.diaowen.common.utils.ExceptionUtils;
 
 /**
  * 支持SHA-1/MD5消息摘要的工具类.
@@ -98,3 +99,4 @@ public abstract class DigestUtils {
 	}
 
 }
+

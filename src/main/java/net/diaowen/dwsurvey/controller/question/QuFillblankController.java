@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.controller.question;
 
 import net.diaowen.common.CheckType;
@@ -29,8 +30,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
-
- * @author ymx
+ * 填空题 action
+ * @author KeYuan(keyuan258@gmail.com)
+ *
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  *
  */
 @Controller
@@ -149,3 +153,4 @@ public class QuFillblankController{
 
 
 }
+

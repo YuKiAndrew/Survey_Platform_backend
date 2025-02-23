@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.controller.question;
 
 import net.diaowen.dwsurvey.service.QuestionManager;
@@ -9,7 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author ymx
+ * 题目 action
+ * @author KeYuan(keyuan258@gmail.com)
+ *
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  *
  */
 @Controller
@@ -37,3 +42,4 @@ public class QuestionController{
 	}
 
 }
+

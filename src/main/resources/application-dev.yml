@@ -1,28 +1,68 @@
 dwsurvey:
+  # 用户模式切换，暂且保持默认 local, test，demo
   site: 'local'
   web:
+    # 后端文件存储目录，默认即在安装包同级目录下
     file-path: dwfile/dwsurvey/
+    # 使用哪种部署模式，后期可能会去掉，可以先保持默认
     static-type: static
-    site-url: http://localhost:8081
-    resource-url: http://localhost:8080
+    # 站点访问地址，如果配置有域名则为域名地址
+    site-url: http://192.168.3.32:8081
+    # 资源访问地址，便于存储模式的切换，目前可以保持与site-url一样
+    resource-url: http://192.168.3.32:8080
+    # 站点信息配置，会出现在底部footer区
     info:
+      # 站点名称
       site-name: 调问网
+      # 站点名称，对应的URL地址
       site-url: http://www.diaowen.net
+      # 站点备案号
+      site-icp: 京ICP备13050030号-3
+      # 站点联系人邮箱
       site-mail: service@diaowen.net
+      # 站点联系人电话
       site-phone: 18888888888
-      site-icp: aaa
+  # 用于微信集成相关，目前社区版还没未启用。
+    login-register:
+      login:
+        wx-login: false
+        phone-login: true
+        pwd-login: true
+      register: true
+  sms:
+    code-open: true
+    sendcloud:
+      smsUser:
+      smsKey:
   weixin:
-    app-id: xxx
-    app-secret: xxx
+    open: false
+    app-id: x
+    app-secret: x
     server:
-      token: xxx
+      token:
       encodingAESKey:
-  version:
-    info: DWSurvey OSS V5.4.0 Boot
-    number: OSS V5.4.0
-    built: 2023/04/15
+  dw-open: # 预留配置
+    api:
+      status: test # test=开发测试模式，不进行API验证；prod=生产模式；验证签名，disable=关闭API功能
+      timestamp: 30 # 签名有效期
+  file-storage:
+    prefix:  #路径前缀，方便给所有资源加上统一的路径，如：/dws-storage
+    type: local #存储方式 local=本地存储（会存储在dwsurvey.web.file-path），yun=使用云存储（默认提供阿里云存储实现,注意配置OSS BUCKET 跨域访问）
+    aliyun:
+      endpoint: https://oss-cn-beijing.aliyuncs.com
+      access-keyid:
+      secret-accesskey:
+      bucket: # 注意打开云存方案的跨域权限
+        prefix: dwsurvey
+        web-pub: web-pub
+        web-pri: web-pri
+# 服务占用的端口号
 server:
   port: 8080
+  tomcat:
+    max-http-form-post-size: -1
+
+# Spring相关配置
 
 spring:
   # json处理
@@ -33,11 +73,18 @@ spring:
   # spring web 配置
   web:
     resources:
+      # 静态资源目录配置，注意这里引用了上面的 dwsurvey.web.file-path 配置
       static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${dwsurvey.web.file-path}
+  # 数据库配置
   datasource:
+    #type: com.alibaba.druid.pool.DruidDataSource
+    # 连接URL
     url: jdbc:mysql://localhost:3306/dwsurvey?useUnicode=true&characterEncoding=utf8
+    # 连接账号
     username: root
+    # 连接密码
     password: root
+
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       initial-size: 5
@@ -57,7 +104,9 @@ spring:
       stat-view-servlet:
         enabled: false
         reset-enable: false
+        #         访问黑名单
         deny: 192.168.0.3
+        #          白名单
         allow: 'localhost'
         url-pattern: /druid/*
         # 上生产环境一定要改账号与密码！
@@ -65,6 +114,8 @@ spring:
         login-password: dwsdb123456
   # jpa配置
   jpa:
+    # 连接的数据库
+
     database: mysql
     generate-ddl: true
     show-sql: true
@@ -74,8 +125,8 @@ spring:
       #  implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl #指定jpa的自动表生成策略，驼峰自动映射为下划线格式
     properties:
       hibernate:
-
-        show_sql: true
+        #是否自动打印hql对应的sql语句
+        show_sql: false
         #是否格式化sql语句
         format_sql: false
         #事务交由spring管理
@@ -84,15 +135,42 @@ spring:
         cache:
           use_second_level_cache: false
           use_query_cache: false
+
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+    jedis:
+      pool:
+        min-idle: 10
+        max-idle: 50
+        max-active: 200
+        max-wait: 3000
   main:
     allow-circular-references: true
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+# 日志配置
 logging:
+  # 日志级别，具体大家可以根据实际情况来调整
   level:
     net:
-      diaowen: INFO
+      diaowen: DEBUG
     org:
       hibernate: ERROR
       apache: ERROR
+elasticsearch:
+  username: elastic
+  passwd: elastic
+  apikey: ==
+  hosts: 127.0.0.1:9200,localhost:9200 # 多个IP逗号隔开
+  cert-name: http_ca.crt
+#  后加的ES参数
+#  协议方式，使用证书这里改成https
+  scheme: http
+#  索引统一前缀，默认为空不加前缀, 如果加建议格式如：dw_
+  index-prev: oss_
+# 认证方式 noPwd, pwd, cert
+  security: pwd

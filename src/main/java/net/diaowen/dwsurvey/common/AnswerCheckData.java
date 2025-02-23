@@ -1,5 +1,9 @@
 package net.diaowen.dwsurvey.common;
 
+
+import net.diaowen.dwsurvey.entity.SurveyJson;
+
+
 public class AnswerCheckData {
 
     private String token;
@@ -8,6 +12,10 @@ public class AnswerCheckData {
     private Integer answerCheckCode = 0;
 
     private String redirectUrl;
+
+
+    private SurveyJson surveyJson;
+
 
     public String getToken() {
         return token;
@@ -48,4 +56,14 @@ public class AnswerCheckData {
     public void setRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
     }
+
+
+    public SurveyJson getSurveyJson() {
+        return surveyJson;
+    }
+
+    public void setSurveyJson(SurveyJson surveyJson) {
+        this.surveyJson = surveyJson;
+    }
+
 }

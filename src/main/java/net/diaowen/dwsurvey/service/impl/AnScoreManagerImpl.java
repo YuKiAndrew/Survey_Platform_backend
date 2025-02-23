@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import java.util.List;
@@ -14,8 +15,11 @@ import org.springframework.stereotype.Service;
 import net.diaowen.common.service.BaseServiceImpl;
 
 /**
- * @author ymx
+ * 评分题
+ * @author keyuan(keyuan258@gmail.com)
  *
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service
 public class AnScoreManagerImpl extends BaseServiceImpl<AnScore, String> implements AnScoreManager {
@@ -41,3 +45,4 @@ public class AnScoreManagerImpl extends BaseServiceImpl<AnScore, String> impleme
 	}
 	
 }
+

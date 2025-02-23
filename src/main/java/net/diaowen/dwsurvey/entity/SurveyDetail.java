@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.entity;
 
 import java.util.Date;
@@ -9,9 +10,9 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 具体的一次调查
- * @author ymx
+ * @author keyuan
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 @Entity
@@ -44,6 +45,7 @@ public class SurveyDetail extends IdEntity{
 	private Integer endNum=1000;
 	//问卷说明
 	private String surveyNote;
+	private String surveyNoteText;
 
 	//是否依据收到的份数结束
 	private Integer ynEndNum=0;
@@ -186,4 +188,12 @@ public class SurveyDetail extends IdEntity{
 	    this.showAnswerDa = showAnswerDa;
 	}
 
+	public String getSurveyNoteText() {
+		return surveyNoteText;
+	}
+
+	public void setSurveyNoteText(String surveyNoteText) {
+		this.surveyNoteText = surveyNoteText;
+	}
 }
+

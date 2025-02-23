@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import java.util.List;
@@ -13,10 +14,10 @@ import org.springframework.stereotype.Service;
 
 /**
  * 题逻辑
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
- * 
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service
 public class QuestionLogicManagerImpl implements QuestionLogicManager {

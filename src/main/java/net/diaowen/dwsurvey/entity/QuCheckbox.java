@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.entity;
 
 import javax.persistence.Entity;
@@ -10,9 +11,9 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 多选题 选项表
- * @author ymx
+ * @author keyuan
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 @Entity
@@ -36,6 +37,13 @@ public class QuCheckbox extends IdEntity{
 	//是否显示  0不显示
 	private Integer visibility=1;
 
+	public QuCheckbox(){
+
+	}
+	public QuCheckbox(String optionTitle, String optionName){
+		this.optionTitle = optionTitle;
+		this.optionName = optionName;
+	}
 	public String getQuId() {
 		return quId;
 	}
@@ -97,3 +105,4 @@ public class QuCheckbox extends IdEntity{
 	}
 
 }
+

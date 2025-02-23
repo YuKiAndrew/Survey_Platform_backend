@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service;
 
 import net.diaowen.common.plugs.page.Page;
@@ -15,3 +16,4 @@ public interface SurveyMailInviteManager {
     
     public void save(SurveyMailInvite surveyMailInvite);
 }
+

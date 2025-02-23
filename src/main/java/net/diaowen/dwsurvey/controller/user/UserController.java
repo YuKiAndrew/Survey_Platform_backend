@@ -12,9 +12,11 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 
 /**
-
- * @author ymx
+ * 用户中心 action
+ * @author KeYuan(keyuan258@gmail.com)
  *
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  *
  */
 @Controller

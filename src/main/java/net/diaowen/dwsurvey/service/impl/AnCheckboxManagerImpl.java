@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import java.util.List;
@@ -15,8 +16,11 @@ import net.diaowen.dwsurvey.dao.AnCheckboxDao;
 import net.diaowen.dwsurvey.entity.DataCross;
 
 /**
- * @author ymx
-
+ * 多选题
+ * @author keyuan(keyuan258@gmail.com)
+ *
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 
 @Service
@@ -56,3 +60,4 @@ public class AnCheckboxManagerImpl extends BaseServiceImpl<AnCheckbox, String> i
 		
 	
 }
+

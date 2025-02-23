@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.entity;
 
 import java.util.Date;
@@ -8,9 +9,9 @@ import javax.persistence.Table;
 import net.diaowen.common.base.entity.IdEntity;
 /**
  * 系统邮件
- * @author ymx
+ * @author keyuan
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 @Entity
@@ -99,3 +100,4 @@ public class SysEmail extends IdEntity{
 	}
 
 }
+

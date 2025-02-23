@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao.impl;
 
 import net.diaowen.dwsurvey.entity.QuOrderby;
@@ -8,9 +9,9 @@ import net.diaowen.dwsurvey.dao.QuOrderbyDao;
 
 /**
  * 排序题 dao
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- *
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 
@@ -18,3 +19,4 @@ import net.diaowen.dwsurvey.dao.QuOrderbyDao;
 public class QuOrderbyDaoImpl extends BaseDaoImpl<QuOrderby, String> implements QuOrderbyDao{
 
 }
+

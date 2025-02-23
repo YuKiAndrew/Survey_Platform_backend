@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import net.diaowen.dwsurvey.service.SysDbBackupManager;
@@ -11,10 +12,10 @@ import net.diaowen.common.service.BaseServiceImpl;
 
 /**
  * 问卷备份
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
- * 
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service
 public class SysDbBackupManagerImpl extends BaseServiceImpl<SysDbBackup, String> implements SysDbBackupManager {
@@ -28,3 +29,4 @@ public class SysDbBackupManagerImpl extends BaseServiceImpl<SysDbBackup, String>
 	}
 	
 }
+

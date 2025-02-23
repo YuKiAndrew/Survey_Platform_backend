@@ -1,3 +1,4 @@
+
 package net.diaowen.common.utils.parsehtml;
 
 import java.util.regex.Pattern;
@@ -56,3 +57,4 @@ public class HtmlUtil {
 		return textStr;// dwv402880e666e15b790166e16222000000 返回文本字符串
 	}
 }
+

@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import java.util.List;
@@ -16,10 +17,10 @@ import net.diaowen.dwsurvey.entity.DataCross;
 
 /**
  * 枚举题
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- *
- * 
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service
 public class AnYesnoManagerImpl extends BaseServiceImpl<AnYesno, String> implements AnYesnoManager {
@@ -56,3 +57,4 @@ public class AnYesnoManagerImpl extends BaseServiceImpl<AnYesno, String> impleme
 	}
 	
 }
+

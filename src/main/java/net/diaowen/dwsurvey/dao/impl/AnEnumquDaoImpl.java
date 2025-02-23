@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao.impl;
 
 
@@ -12,9 +13,9 @@ import net.diaowen.common.dao.BaseDaoImpl;
 
 /**
  * 枚举 dao
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 
@@ -33,3 +34,4 @@ public class AnEnumquDaoImpl extends BaseDaoImpl<AnEnumqu, String> implements An
 	}
 
 }
+

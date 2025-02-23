@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao.impl;
 
 import net.diaowen.dwsurvey.dao.AnAnswerDao;
@@ -9,9 +10,9 @@ import net.diaowen.common.dao.BaseDaoImpl;
 
 /**
  * 答卷 dao
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 

@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service;
 
 import net.diaowen.common.service.BaseService;
@@ -8,9 +9,9 @@ import java.util.List;
 
 /**
  * 填空题
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- *
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 public interface AnUploadFileManager extends BaseService<AnUplodFile, String> {

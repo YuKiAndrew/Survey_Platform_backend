@@ -18,9 +18,17 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.Map;
 
+
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
+
 /**
  *
 * @ClassName: SuperHttpDao
+* @Description: TODO(http请求超类，http请求更高级原始的封装)
+* @author keyuan
+* @date 2016年9月17日 上午11:22:21
+>>>>>>> 2593c893586618bcd925c3c27214e9edaacb9b4f
 *
  */
 @Component
@@ -71,10 +79,11 @@ public class SuperHttpDao {
 				return EntityUtils.toString(response.getEntity(), "UTF-8");
 			}
 		} catch (ClientProtocolException e) {
-			e.printStackTrace();
+
+//			e.printStackTrace();
 			logger.error("doPost(HttpPost httpPost) ClientProtocolException : {} ", httpPost.getURI().toString());
 		} catch (IOException e) {
-			e.printStackTrace();
+//			e.printStackTrace();
 			logger.error("doPost(HttpPost httpPost) IOException : {} ", httpPost.getURI().toString());
 		} finally {
 			if (response != null) {

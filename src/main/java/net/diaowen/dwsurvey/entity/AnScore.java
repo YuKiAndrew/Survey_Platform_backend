@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.entity;
 
 import javax.persistence.Entity;
@@ -7,10 +8,10 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 评分题
- * @author ymx
+ * @author KeYuan
  * @date 2013下午8:48:24
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 @Entity
@@ -26,19 +27,21 @@ public class AnScore extends IdEntity{
 	//对应的行ID
 	private String quRowId;
 	//对应的结果，即分值
-	private String answserScore;
+	private String answserScore; // 之前字段名
+	private String answerScore; // 最新字段名
 
 	private Integer visibility=1;
 
 	public AnScore(){
 
 	}
-	public AnScore(String surveyId, String surveyAnswerId, String quId,String quRowId,String answserScore) {
+	public AnScore(String surveyId, String surveyAnswerId, String quId,String quRowId,String answerScore) {
 		this.belongId=surveyId;
 		this.belongAnswerId=surveyAnswerId;
 		this.quId=quId;
 		this.quRowId=quRowId;
-		this.answserScore=answserScore;
+		this.answserScore=answerScore;
+		this.answerScore=answerScore;
 	}
 	public String getBelongId() {
 		return belongId;
@@ -77,4 +80,12 @@ public class AnScore extends IdEntity{
 		this.visibility = visibility;
 	}
 
+	public String getAnswerScore() {
+		return answerScore;
+	}
+
+	public void setAnswerScore(String answerScore) {
+		this.answerScore = answerScore;
+	}
 }
+

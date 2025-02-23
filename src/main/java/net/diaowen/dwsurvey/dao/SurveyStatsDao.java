@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao;
 
 import net.diaowen.common.dao.BaseDao;
@@ -9,3 +10,4 @@ public interface SurveyStatsDao extends BaseDao<SurveyStats, String>{
 	public void findStatsDataCross(Question rowQuestion, Question colQuestion);
 
 }
+

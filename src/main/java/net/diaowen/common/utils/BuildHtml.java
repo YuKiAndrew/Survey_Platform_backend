@@ -1,3 +1,4 @@
+
 package net.diaowen.common.utils;
 
 import java.io.*;
@@ -47,3 +48,4 @@ public class BuildHtml {
 	}
 
 }
+

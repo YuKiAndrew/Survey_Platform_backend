@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import java.util.ArrayList;
@@ -22,10 +23,10 @@ import net.diaowen.common.service.BaseServiceImpl;
 
 /**
  * 题库
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- *
- * 
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service
 public class QuestionBankManagerImpl extends BaseServiceImpl<QuestionBank, String> implements QuestionBankManager {
@@ -184,3 +185,4 @@ public class QuestionBankManagerImpl extends BaseServiceImpl<QuestionBank, Strin
 		return result;
 	}
 }
+

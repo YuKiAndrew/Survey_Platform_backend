@@ -1,3 +1,4 @@
+
 package net.diaowen.common.utils;
 
 import java.io.BufferedReader;
@@ -217,3 +218,4 @@ public class FileUtils {
 	return stringBuffer.toString();
 	}
 }
+

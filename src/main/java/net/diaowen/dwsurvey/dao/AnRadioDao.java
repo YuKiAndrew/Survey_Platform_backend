@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao;
 
 import java.util.List;
@@ -9,9 +10,9 @@ import net.diaowen.dwsurvey.entity.DataCross;
 
 /**
  * 单选题 interface
- * @author ymx
+ * @author KeYuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  *
  */
@@ -25,3 +26,4 @@ public interface AnRadioDao extends BaseDao<AnRadio, String> {
 	public List<DataCross> findStatsDataChart(Question question);
 
 }
+

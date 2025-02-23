@@ -1,3 +1,4 @@
+
 /**
  * Copyright (c) 2005-2011 springside.org.cn
  *
@@ -40,11 +41,12 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
 /**
- * Hibernate DAO Base Class
+ * 封装SpringSide扩展功能的Hibernat DAO泛型基类.
  *
+ * 扩展功能包括分页查询,按属性过滤条件列表查询.
  *
- * @param <T>
- * @param <ID>
+ * @param <T> DAO操作的对象类型
+ * @param <ID> 主键类型
  *
  */
 
@@ -67,7 +69,7 @@ public class HibernateDao<T, ID extends Serializable> extends SimpleHibernateDao
 	//-- 分页查询函数 --//
 
 	/* (non-Javadoc)
-
+	 * @see net.diaowen.common.orm.hibernate.IHibernateDao#getAll(net.diaowen.common.orm.PageRequest)
 	 */
 	@Override
 	public Page<T> getAll(final PageRequest pageRequest) {
@@ -75,7 +77,7 @@ public class HibernateDao<T, ID extends Serializable> extends SimpleHibernateDao
 	}
 
 	/* (non-Javadoc)
-
+	 * @see net.diaowen.common.orm.hibernate.IHibernateDao#findPage(net.diaowen.common.orm.PageRequest, java.lang.String, java.lang.Object)
 	 */
 	@Override
 	public Page<T> findPage(final PageRequest pageRequest, String hql, final Object... values) {
@@ -101,7 +103,7 @@ public class HibernateDao<T, ID extends Serializable> extends SimpleHibernateDao
 	}
 
 	/* (non-Javadoc)
-
+	 * @see net.diaowen.common.orm.hibernate.IHibernateDao#findPage(net.diaowen.common.orm.PageRequest, java.lang.String)
 	 */
 	@Override
 	public Page<T> findPage(final PageRequest pageRequest, String hql) {
@@ -122,7 +124,7 @@ public class HibernateDao<T, ID extends Serializable> extends SimpleHibernateDao
 	}
 
 	/* (non-Javadoc)
-
+	 * @see net.diaowen.common.orm.hibernate.IHibernateDao#findPage(net.diaowen.common.orm.PageRequest, java.lang.String, java.util.Map)
 	 */
 	@Override
 	public Page<T> findPage(final PageRequest pageRequest, String hql, final Map<String, ?> values) {
@@ -148,7 +150,7 @@ public class HibernateDao<T, ID extends Serializable> extends SimpleHibernateDao
 	}
 
 	/* (non-Javadoc)
-
+	 * @see net.diaowen.common.orm.hibernate.IHibernateDao#findPage(net.diaowen.common.orm.PageRequest, org.hibernate.criterion.Criterion)
 	 */
 	@Override
 	public Page<T> findPage(final PageRequest pageRequest, final Criterion... criterions) {
@@ -174,7 +176,7 @@ public class HibernateDao<T, ID extends Serializable> extends SimpleHibernateDao
 	}
 
 	/**
-	 * Helper function to append the orderBy clause for pagination parameters in HQL.
+	 * 在HQL的后面添加分页参数定义的orderBy, 辅助函数.
 	 */
 	protected String setOrderParameterToHql(final String hql, final PageRequest pageRequest) {
 		StringBuilder builder = new StringBuilder(hql);
@@ -190,7 +192,7 @@ public class HibernateDao<T, ID extends Serializable> extends SimpleHibernateDao
 	}
 
 	/**
-	 * Helper function to set pagination parameters to the Query object.
+	 * 设置分页参数到Query对象,辅助函数.
 	 */
 	protected Query setPageParameterToQuery(final Query q, final PageRequest pageRequest) {
 		q.setFirstResult(pageRequest.getOffset());
@@ -199,7 +201,7 @@ public class HibernateDao<T, ID extends Serializable> extends SimpleHibernateDao
 	}
 
 	/**
-	 * Helper function to set pagination parameters to the Criteria object.
+	 * 设置分页参数到Criteria对象,辅助函数.
 	 */
 	protected Criteria setPageRequestToCriteria(final Criteria c, final PageRequest pageRequest) {
 		AssertUtils.isTrue(pageRequest.getPageSize() > 0, "Page Size must larger than zero");
@@ -220,9 +222,9 @@ public class HibernateDao<T, ID extends Serializable> extends SimpleHibernateDao
 	}
 
 	/**
-	 Execute a count query to obtain the total number of objects that can be retrieved by the current HQL query.
-
-	 This function can only automatically handle simple HQL statements. For complex HQL queries, please write a separate count query.
+	 * 执行count查询获得本次Hql查询所能获得的对象总数.
+	 *
+	 * 本函数只能自动处理简单的hql语句,复杂的hql查询请另行编写count语句查询.
 	 */
 	protected long countHqlResult(final String hql, final Object... values) {
 		String countHql = prepareCountHql(hql);
@@ -235,6 +237,11 @@ public class HibernateDao<T, ID extends Serializable> extends SimpleHibernateDao
 		}
 	}
 
+	/**
+	 * 执行count查询获得本次Hql查询所能获得的对象总数.
+	 *
+	 * 本函数只能自动处理简单的hql语句,复杂的hql查询请另行编写count语句查询.
+	 */
 	protected long countHqlResult(final String hql, final Map<String, ?> values) {
 		String countHql = prepareCountHql(hql);
 
@@ -281,7 +288,7 @@ public class HibernateDao<T, ID extends Serializable> extends SimpleHibernateDao
 			orderEntries = (List) ReflectionUtils.getFieldValue(impl, "orderEntries");
 			ReflectionUtils.setFieldValue(impl, "orderEntries", new ArrayList());
 		} catch (Exception e) {
-			logger.error("unreachable exception:{}", e.getMessage());
+			logger.error("不可能抛出的异常:{}", e.getMessage());
 		}
 		// 执行Count查询
 		Long totalCountObject = 0L;
@@ -304,7 +311,7 @@ public class HibernateDao<T, ID extends Serializable> extends SimpleHibernateDao
 		try {
 			ReflectionUtils.setFieldValue(impl, "orderEntries", orderEntries);
 		} catch (Exception e) {
-			logger.error("unreachable exception:{}", e.getMessage());
+			logger.error("不可能抛出的异常:{}", e.getMessage());
 		}
 
 		return totalCount;
@@ -504,3 +511,4 @@ public class HibernateDao<T, ID extends Serializable> extends SimpleHibernateDao
 	}
 
 }
+

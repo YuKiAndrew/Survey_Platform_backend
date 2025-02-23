@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import java.util.List;
@@ -16,10 +17,10 @@ import net.diaowen.dwsurvey.entity.DataCross;
 
 /**
  * 单选题
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
- * 
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service
 public class AnRadioManagerImpl extends BaseServiceImpl<AnRadio, String> implements AnRadioManager {
@@ -56,3 +57,4 @@ public class AnRadioManagerImpl extends BaseServiceImpl<AnRadio, String> impleme
 		return anRadioDao.findStatsDataChart(question);
 	}
 }
+

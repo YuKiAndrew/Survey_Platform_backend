@@ -3,7 +3,7 @@ package net.diaowen.dwsurvey.common;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
- * Created by ymx on 18/4/11.
+ * Created by keyuan on 18/4/11.
  */
 @JsonIgnoreProperties({"bytes"})
 public class FileMeta {

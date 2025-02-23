@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import java.util.ArrayList;
@@ -23,10 +24,10 @@ import javax.persistence.criteria.Root;
 
 /**
  * 多选题
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
- * 
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service("quCheckboxManager")
 public class QuCheckboxManagerImpl extends BaseServiceImpl<QuCheckbox, String> implements QuCheckboxManager {
@@ -135,3 +136,4 @@ public class QuCheckboxManagerImpl extends BaseServiceImpl<QuCheckbox, String> i
 	}
 
 }
+

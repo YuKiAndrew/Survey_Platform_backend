@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import net.diaowen.dwsurvey.dao.SysEmailDao;
@@ -20,3 +21,4 @@ public class SysEmailManagerImpl extends BaseServiceImpl<SysEmail, String> imple
 	}
 	
 }
+

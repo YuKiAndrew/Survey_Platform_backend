@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import java.util.List;
@@ -16,10 +17,10 @@ import net.diaowen.dwsurvey.service.AnDFillblankManager;
 
 /**
  * 多行填空题
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- *
- * 
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service
 public class AnDFillblankManagerImpl extends BaseServiceImpl<AnDFillblank, String> implements AnDFillblankManager{
@@ -52,3 +53,4 @@ public class AnDFillblankManagerImpl extends BaseServiceImpl<AnDFillblank, Strin
 		return findPage(page,cri1,cri2);
 	}
 }
+

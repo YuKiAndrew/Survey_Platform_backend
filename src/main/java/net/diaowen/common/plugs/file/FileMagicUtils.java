@@ -9,6 +9,7 @@ import java.io.InputStream;
 public class FileMagicUtils {
 
 
+    //非登录用户能够上传的文件类型
     public static FileMagic[] anonUpFileType() {
         return new FileMagic[]{FileMagic.PNG,FileMagic.JPG,FileMagic.JPEG,FileMagic.GIF,
                 FileMagic.TXT,FileMagic.PDF,
@@ -17,13 +18,16 @@ public class FileMagicUtils {
     }
 
 
+    //登录用户能够上传的文件类型
+
     public static FileMagic[] userUpFileType() {
         return new FileMagic[]{FileMagic.PNG,FileMagic.JPG,FileMagic.JPEG,FileMagic.GIF,
                 FileMagic.TXT,FileMagic.PDF,
                 FileMagic.XLSX,FileMagic.XLS,FileMagic.DOC,FileMagic.DOCX,FileMagic.PPT,FileMagic.PPTX,
-                FileMagic.ZIP,FileMagic.RAR,FileMagic.Z7Z};
+                FileMagic.ZIP,FileMagic.RAR,FileMagic.Z7Z,FileMagic.OLE2};
     }
 
+    //根据文件获取对应的文件类型
 
     public static FileMagic getFileMagic(File inp, String fileSuffix) throws Exception {
         FileMagic fileMagic = null;
@@ -39,6 +43,8 @@ public class FileMagicUtils {
         return fileMagic;
     }
 
+
+    //切换到使用最新的tika验测
 
     public static FileMagic getFileMagic(byte[] bytes,String fileName) throws IOException{
         String mineType = TikaFileUtils.mimeType(bytes,fileName);
@@ -56,6 +62,8 @@ public class FileMagicUtils {
         return FileMagic.UNKNOWN;
     }
 
+
+    //切换到使用最新的tika验测
 
     public static FileMagic getFileMagic(InputStream fis, String fileName) throws IOException{
         String mineType = TikaFileUtils.mimeType(fis,fileName);
@@ -104,7 +112,7 @@ public class FileMagicUtils {
     }
 
     /**
-     * blacklist
+     * 判断是否在登录用户可上传白名单
      * @param fileMagic
      * @return
      */

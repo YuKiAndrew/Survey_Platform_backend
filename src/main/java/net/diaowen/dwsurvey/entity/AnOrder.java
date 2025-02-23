@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.entity;
 
 import javax.persistence.Entity;
@@ -7,10 +8,10 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 评分题
- * @author ymx
+ * @author KeYuan
  * @date 2013下午8:48:24
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 @Entity
@@ -78,3 +79,4 @@ public class AnOrder extends IdEntity{
 	}
 
 }
+

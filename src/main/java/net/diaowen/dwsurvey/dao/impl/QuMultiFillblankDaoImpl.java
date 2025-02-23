@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao.impl;
 
 import net.diaowen.dwsurvey.dao.QuMultiFillblankDao;
@@ -8,9 +9,9 @@ import net.diaowen.common.dao.BaseDaoImpl;
 
 /**
  * 多行填空题 dao
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 
@@ -19,3 +20,4 @@ import net.diaowen.common.dao.BaseDaoImpl;
 public class QuMultiFillblankDaoImpl extends BaseDaoImpl<QuMultiFillblank, String> implements QuMultiFillblankDao {
 
 }
+

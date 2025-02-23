@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.entity;
 
 import java.util.ArrayList;
@@ -12,10 +13,10 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 单个问卷的全局统计信息
- * @author ymx
+ * @author KeYuan
  * @date 2013下午6:48:25
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 @Entity
@@ -192,3 +193,4 @@ public class SurveyStats extends IdEntity{
 
 
 }
+

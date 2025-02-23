@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service;
 
 import net.diaowen.common.service.BaseService;
@@ -8,3 +9,4 @@ public interface SysSendEmailManager extends BaseService<SysSendEmail, String> {
 	public void scanning();
 	
 }
+

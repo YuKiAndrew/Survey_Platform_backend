@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao.impl;
 
 import net.diaowen.dwsurvey.dao.MailInviteInboxDao;
@@ -10,3 +11,4 @@ import net.diaowen.common.dao.BaseDaoImpl;
 public class MailInviteInboxDaoImpl extends BaseDaoImpl<MailInviteInbox, String> implements MailInviteInboxDao {
     
 }
+

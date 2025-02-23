@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service;
 
 import java.util.List;
@@ -20,3 +21,4 @@ public interface MailInviteInboxManager {
 	public void post(String mailInviteId);
 	
 }
+

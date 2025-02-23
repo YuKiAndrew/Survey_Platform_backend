@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.controller.question;
 
 import net.diaowen.common.base.entity.User;
@@ -26,8 +27,11 @@ import java.util.List;
 
 
 /**
- * @author ymx
+ * 设计问卷
+ * @author keyuan(keyuan258@gmail.com)
  *
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  *
  */
 @Controller
@@ -193,3 +197,4 @@ public class SurveyDesignController {
 	}
 
 }
+

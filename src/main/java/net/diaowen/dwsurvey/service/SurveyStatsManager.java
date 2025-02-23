@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service;
 
 import java.util.List;
@@ -10,9 +11,9 @@ import net.diaowen.dwsurvey.entity.SurveyDirectory;
 
 /**
  * 统计报表
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 public interface SurveyStatsManager extends BaseService<SurveyStats, String>{
@@ -28,3 +29,4 @@ public interface SurveyStatsManager extends BaseService<SurveyStats, String>{
 	public List<Question> dataChart1s(SurveyDirectory survey);
 	public void questionDateCross(Question question) ;
 }
+

@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao;
 
 
@@ -6,12 +7,13 @@ import net.diaowen.dwsurvey.entity.QuestionBank;
 
 /**
  * 题库 interface
- * @author ymx
+ * @author KeYuan(keyuan258@gmail.com)
  *
- *
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  *
  */
 public interface QuestionBankDao extends BaseDao<QuestionBank, String>{
 
 }
+

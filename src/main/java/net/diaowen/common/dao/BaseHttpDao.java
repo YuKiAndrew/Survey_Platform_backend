@@ -2,6 +2,7 @@ package net.diaowen.common.dao;
 
 import net.diaowen.common.plugs.httpclient.HttpClientUtils;
 import net.sf.json.JSONObject;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.*;
@@ -21,7 +22,14 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
+
+
 /**
+ * @author keyuan
+ * @ClassName: BaseHttpDao
+ * @Description: TODO(Http请求基础类，封装了各类请求方法)
+ * @date 2016年9月17日 上午11:21:41
+
  */
 public abstract class BaseHttpDao extends SuperHttpDao {
 

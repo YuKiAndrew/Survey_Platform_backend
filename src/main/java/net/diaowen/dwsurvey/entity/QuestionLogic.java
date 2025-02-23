@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.entity;
 
 import java.util.Date;
@@ -10,10 +11,10 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 题目逻辑设置
- * @author ymx
+ * @author KeYuan
  * @date 2014下午9:23:21
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 @Entity
@@ -96,3 +97,4 @@ public class QuestionLogic extends IdEntity{
 	}
 
 }
+

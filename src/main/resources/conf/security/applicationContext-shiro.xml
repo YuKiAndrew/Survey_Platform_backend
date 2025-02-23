@@ -5,7 +5,7 @@
                         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"
 	default-lazy-init="true">
 
-	<description>Shiro</description>
+	<description>Shiro安全配置</description>
 
 	<bean id="shiroDbRealm" class="net.diaowen.common.plugs.security.ShiroDbRealm" />
 
@@ -69,6 +69,7 @@
 
 	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />
 
+	<!-- 使用记住我功能 -->
 	<!-- 会话Cookie模板 -->
 	<bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
 	    <constructor-arg value="sid"/>

@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import java.util.List;
@@ -23,10 +24,10 @@ import net.diaowen.common.service.BaseServiceImpl;
 
 /**
  * 问卷统计
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
- * 
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service
 public class SurveyStatsManagerImpl extends
@@ -357,3 +358,4 @@ public class SurveyStatsManagerImpl extends
 		return textStr;// 返回文本字符串
 	}
 }
+

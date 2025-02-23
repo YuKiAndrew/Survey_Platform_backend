@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao.impl;
 
 import net.diaowen.dwsurvey.entity.ImportError;
@@ -8,9 +9,9 @@ import net.diaowen.common.dao.BaseDaoImpl;
 
 /**
  * 导入错误记录 dao
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 
@@ -18,3 +19,4 @@ import net.diaowen.common.dao.BaseDaoImpl;
 public class ImportErrorDaoImpl  extends BaseDaoImpl<ImportError, String> implements ImportErrorDao {
 
 }
+

@@ -1,3 +1,4 @@
+
 /**
  * Copyright (c) 2005-2011 springside.org.cn
  *
@@ -154,3 +155,4 @@ public abstract class EncodeUtils {
 		return StringEscapeUtils.unescapeXml(xmlEscaped);
 	}
 }
+

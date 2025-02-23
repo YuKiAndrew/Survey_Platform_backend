@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service;
 
 import java.util.List;
@@ -7,9 +8,9 @@ import net.diaowen.dwsurvey.entity.QuOrderby;
 
 /**
  * 排序题
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 public interface QuOrderbyManager extends BaseService<QuOrderby, String>{
@@ -24,3 +25,4 @@ public interface QuOrderbyManager extends BaseService<QuOrderby, String>{
 
 	public void saveAttr(String quItemId);
 }
+

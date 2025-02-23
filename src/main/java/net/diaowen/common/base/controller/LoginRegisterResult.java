@@ -36,14 +36,6 @@ public class LoginRegisterResult {
         this.currentAuthority = currentAuthority;
     }
 
-    public HttpResult getHttpResult() {
-        return httpResult;
-    }
-
-    public void setHttpResult(HttpResult httpResult) {
-        this.httpResult = httpResult;
-    }
-
     public String getToken() {
         return token;
     }
@@ -53,11 +45,15 @@ public class LoginRegisterResult {
     }
 
 
-    public static LoginRegisterResult SUCCESS(String token, String[] currentAuthority, HttpResult httpResult){
-        LoginRegisterResult loginRegisterResult = SUCCESS(currentAuthority,httpResult);
-        loginRegisterResult.setToken(token);
-        return loginRegisterResult;
+    public HttpResult getHttpResult() {
+        return httpResult;
     }
+
+    public void setHttpResult(HttpResult httpResult) {
+        this.httpResult = httpResult;
+    }
+
+
     public static LoginRegisterResult RESULT(String status,String type){
         LoginRegisterResult loginResult = new LoginRegisterResult();
         loginResult.setStatus(status);
@@ -84,12 +80,6 @@ public class LoginRegisterResult {
         return loginResult;
     }
 
-    public static LoginRegisterResult SUCCESS(String[] currentAuthority, HttpResult httpResult){
-        LoginRegisterResult loginRegisterResult = SUCCESS(currentAuthority);
-        loginRegisterResult.setHttpResult(httpResult);
-        return loginRegisterResult;
-    }
-
     public static LoginRegisterResult FAILURE(){
         LoginRegisterResult loginResult = new LoginRegisterResult();
         loginResult.setStatus("error");
@@ -107,4 +97,16 @@ public class LoginRegisterResult {
         return loginResult;
     }
 
+
+    public static LoginRegisterResult SUCCESS(String[] currentAuthority, HttpResult httpResult){
+        LoginRegisterResult loginRegisterResult = SUCCESS(currentAuthority);
+        loginRegisterResult.setHttpResult(httpResult);
+        return loginRegisterResult;
+    }
+
+    public static LoginRegisterResult SUCCESS(String token, String[] currentAuthority, HttpResult httpResult){
+        LoginRegisterResult loginRegisterResult = SUCCESS(currentAuthority,httpResult);
+        loginRegisterResult.setToken(token);
+        return loginRegisterResult;
+    }
 }

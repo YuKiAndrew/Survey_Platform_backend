@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao;
 
 import net.diaowen.dwsurvey.entity.SurveyDetail;
@@ -9,3 +10,4 @@ import net.diaowen.common.dao.BaseDaoImpl;
 public class SurveyDetailDaoImpl extends BaseDaoImpl<SurveyDetail, String> implements SurveyDetailDao {
 
 }
+

@@ -1,3 +1,4 @@
+
 package net.diaowen.common.utils;
 
 import net.diaowen.dwsurvey.config.DWSurveyConfig;
@@ -34,3 +35,4 @@ public class DwWriteFile {
 	}
 
 }
+

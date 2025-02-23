@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import java.util.ArrayList;
@@ -21,8 +22,11 @@ import javax.persistence.criteria.Root;
 
 
 /**
- * @author ymx
+ * 多项填空题
+ * @author keyuan(keyuan258@gmail.com)
  *
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service("quMultiFillblankManager")
 public class QuMultiFillblankManagerImpl extends BaseServiceImpl<QuMultiFillblank, String> implements QuMultiFillblankManager {
@@ -122,3 +126,4 @@ public class QuMultiFillblankManagerImpl extends BaseServiceImpl<QuMultiFillblan
 		quMultiFillblankDao.save(quMultiFillblank);
 	}
 }
+

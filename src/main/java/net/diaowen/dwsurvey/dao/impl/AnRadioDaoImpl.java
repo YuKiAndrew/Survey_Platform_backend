@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao.impl;
 
 import java.util.ArrayList;
@@ -17,9 +18,9 @@ import net.diaowen.dwsurvey.entity.QuCheckbox;
 
 /**
  * 单选题 dao
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- *
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 
@@ -206,3 +207,4 @@ public class AnRadioDaoImpl extends BaseDaoImpl<AnRadio, String> implements AnRa
 	}
 
 }
+

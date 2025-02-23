@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao.impl;
 
 import net.diaowen.dwsurvey.dao.SurveyStyleDao;
@@ -8,9 +9,9 @@ import net.diaowen.dwsurvey.entity.SurveyStyle;
 
 /**
  * 问卷样式 dao
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- *
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 
@@ -18,3 +19,4 @@ import net.diaowen.dwsurvey.entity.SurveyStyle;
 public class SurveyStyleDaoImpl extends BaseDaoImpl<SurveyStyle, String> implements SurveyStyleDao {
 
 }
+

@@ -1,3 +1,4 @@
+
 /**
  * Copyright (c) 2005-2011 springside.org.cn
  *
@@ -7,6 +8,7 @@
  */
 package net.diaowen.common.plugs.page;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -15,8 +17,9 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 import com.google.common.collect.Lists;
 
 /**
- * Pagination query result encapsulation
- *
+ * 与具体ORM实现无关的分页查询结果封装.
+ * 
+ * @param <T> Page中记录的类型.
  *
  */
 public class Page<T> extends PageRequest implements Iterable<T> {
@@ -36,28 +39,28 @@ public class Page<T> extends PageRequest implements Iterable<T> {
 	}
 
 	/**
-	 * Get the list of records within the page.
+	 * 获得页内的记录列表.
 	 */
 	public List<T> getResult() {
 		return result;
 	}
 
 	/**
-	 * Set the list of records within the page.
+	 * 设置页内的记录列表.
 	 */
 	public void setResult(final List<T> result) {
 		this.result = result;
 	}
 
 	/**
-	 * Get total number of records
+	 * 获得总记录数, 默认值为-1.
 	 */
 	public long getTotalItems() {
 		return totalItems;
 	}
 
 	/**
-	 * Set total number of records
+	 * 设置总记录数.
 	 */
 	public void setTotalItems(final long totalItems) {
 		this.totalItems = totalItems;
@@ -66,7 +69,7 @@ public class Page<T> extends PageRequest implements Iterable<T> {
 	}
 
 	/** 
-	 * Utilize the iterator
+	 * 实现Iterable接口, 可以for(Object item : page)遍历使用
 	 */
 	@Override
 	public Iterator<T> iterator() {
@@ -74,7 +77,7 @@ public class Page<T> extends PageRequest implements Iterable<T> {
 	}
 
 	/**
-	 * get the totalpage number
+	 * 根据pageSize与totalItems计算总页数.
 	 */
 	public int getTotalPages() {
 		return (int) Math.ceil((double) totalItems / (double) getPageSize());
@@ -82,18 +85,22 @@ public class Page<T> extends PageRequest implements Iterable<T> {
 	}
 
 	/**
-	 * The next page function
+	 * 是否还有下一页.
 	 */
 	public boolean hasNextPage() {
 		return (getPageNo() + 1 <= getTotalPages());
 	}
 
+	/**
+	 * 是否最后一页.
+	 */
 	public boolean isLastPage() {
 		return !hasNextPage();
 	}
 
 	/**
-	 * obtain the next page
+	 * 取得下页的页号, 序号从1开始.
+	 * 当前页为尾页时仍返回尾页序号.
 	 */
 	public int getNextPage() {
 		if (hasNextPage()) {
@@ -103,15 +110,24 @@ public class Page<T> extends PageRequest implements Iterable<T> {
 		}
 	}
 
+	/**
+	 * 是否还有上一页.
+	 */
 	public boolean hasPrePage() {
 		return (getPageNo() > 1);
 	}
 
+	/**
+	 * 是否第一页.
+	 */
 	public boolean isFirstPage() {
 		return !hasPrePage();
 	}
 
-
+	/**
+	 * 取得上页的页号, 序号从1开始.
+	 * 当前页为首页时返回首页序号.
+	 */
 	public int getPrePage() {
 		if (hasPrePage()) {
 			return getPageNo() - 1;
@@ -121,7 +137,9 @@ public class Page<T> extends PageRequest implements Iterable<T> {
 	}
 
 	/**
-	 * calcualte the page number
+	 * 计算以当前页为中心的页面列表,如"首页,23,24,25,26,27,末页"
+	 * @param count 需要计算的列表大小
+	 * @return pageNo列表 
 	 */
 	public List<Integer> getSlider(int count) {
 		int halfSize = count / 2;
@@ -185,10 +203,28 @@ public class Page<T> extends PageRequest implements Iterable<T> {
 	public void setEndpage(int endpage) {
 		this.endpage = endpage;
 	}
-	
+
 	@Override
 	public String toString() {
 		return ToStringBuilder.reflectionToString(this);
 	}
-	
+
+
+	public void addResult(T resultItem){
+		if (this.result==null) {
+			this.result = new ArrayList<>();
+		}
+		this.result.add(resultItem);
+	}
+
+	private String scrollId;
+
+	public String getScrollId() {
+		return scrollId;
+	}
+
+	public void setScrollId(String scrollId) {
+		this.scrollId = scrollId;
+	}
 }
+

@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao.impl;
 
 
@@ -27,9 +28,9 @@ import javax.persistence.criteria.Root;
 
 /**
  * 题基础 dao
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 
@@ -242,3 +243,4 @@ public class QuestionDaoImpl extends BaseDaoImpl<Question, String> implements Qu
 		}
 	}
 }
+

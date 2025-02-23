@@ -1,3 +1,4 @@
+
 package net.diaowen.common.service;
 
 import java.io.Serializable;
@@ -12,9 +13,9 @@ import net.diaowen.common.plugs.page.Page;
 
 /**
  * 业务基类
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 @Transactional

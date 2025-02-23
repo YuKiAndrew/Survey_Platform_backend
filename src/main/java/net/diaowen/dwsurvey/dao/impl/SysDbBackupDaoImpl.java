@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao.impl;
 
 import org.springframework.stereotype.Repository;
@@ -8,9 +9,9 @@ import net.diaowen.dwsurvey.entity.SysDbBackup;
 
 /**
  * 系统备份 dao
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 
@@ -18,3 +19,4 @@ import net.diaowen.dwsurvey.entity.SysDbBackup;
 public class SysDbBackupDaoImpl extends BaseDaoImpl<SysDbBackup, String> implements SysDbBackupDao{
 	
 }
+

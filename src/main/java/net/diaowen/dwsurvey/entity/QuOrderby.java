@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.entity;
 
 import javax.persistence.Entity;
@@ -8,7 +9,7 @@ import net.diaowen.common.base.entity.IdEntity;
 
 /**
  * 评分题 行选项
- * @author ymx
+ * @author KeYuan
  * @date 2013下午12:14:26
  *
  */
@@ -26,6 +27,14 @@ public class QuOrderby extends IdEntity {
 		private Integer orderById;
 		//是否显示  0不显示
 		private Integer visibility=1;
+
+		public QuOrderby(){
+
+		}
+		public QuOrderby(String optionTitle, String optionName){
+			this.optionTitle = optionTitle;
+			this.optionName = optionName;
+		}
 
 		public String getQuId() {
 			return quId;
@@ -69,3 +78,4 @@ public class QuOrderby extends IdEntity {
 
 
 }
+

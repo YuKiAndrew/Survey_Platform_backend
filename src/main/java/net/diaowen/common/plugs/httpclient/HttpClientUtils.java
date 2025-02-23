@@ -23,6 +23,12 @@ public class HttpClientUtils {
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * 请求最基本的封装，带有认证信息及地址识别
+     *
+     * @param url 一个除去根路径的相对地址
+>>>>>>> 2593c893586618bcd925c3c27214e9edaacb9b4f
      * @return
      * @throws URISyntaxException
      */
@@ -32,6 +38,12 @@ public class HttpClientUtils {
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * 调用些方法不用再传认证信息
+     *
+     * @param url    一个除去根路径的相对地址
+>>>>>>> 2593c893586618bcd925c3c27214e9edaacb9b4f
      * @param params
      * @return
      * @throws URISyntaxException
@@ -64,6 +76,13 @@ public class HttpClientUtils {
 
 
     /**
+<<<<<<< HEAD
+=======
+     * 创建HttpGet 不用带认证参数
+     *
+     * @param url     相对路径
+     * @param params  方法参数
+>>>>>>> 2593c893586618bcd925c3c27214e9edaacb9b4f
      * @param headers
      * @return
      * @throws URISyntaxException

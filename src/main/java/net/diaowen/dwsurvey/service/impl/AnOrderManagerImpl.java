@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import java.util.List;
@@ -15,10 +16,10 @@ import net.diaowen.common.service.BaseServiceImpl;
 
 /**
  * 排序题
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
- * 
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service
 public class AnOrderManagerImpl extends BaseServiceImpl<AnOrder, String> implements AnOrderManager {
@@ -45,3 +46,4 @@ public class AnOrderManagerImpl extends BaseServiceImpl<AnOrder, String> impleme
 	}
 	
 }
+

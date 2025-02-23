@@ -20,8 +20,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
-
- * @author YMX
+ * 评分题 action
+ * @author KeYuan(keyuan258@gmail.com)
+ *
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  *
  */
 @Controller

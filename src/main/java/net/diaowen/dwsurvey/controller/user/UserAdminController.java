@@ -5,7 +5,9 @@ import net.diaowen.common.plugs.httpclient.HttpResult;
 import net.diaowen.common.plugs.httpclient.PageResult;
 import net.diaowen.common.plugs.httpclient.ResultUtils;
 import net.diaowen.common.plugs.page.Page;
-import net.diaowen.common.plugs.security.filter.FormAuthenticationWithLockFilter;
+
+import net.diaowen.common.plugs.security.FormAuthenticationWithLockFilter;
+
 import net.diaowen.dwsurvey.config.DWSurveyConfig;
 import net.diaowen.dwsurvey.service.UserManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +46,9 @@ public class UserAdminController {
     @ResponseBody
     public HttpResult add(@RequestBody User user) {
         try{
-            if("demo".equals(DWSurveyConfig.DWSURVEY_SITE)) return HttpResult.FAILURE("can not operate under demo environment");
+
+//            if("demo".equals(DWSurveyConfig.DWSURVEY_SITE)) return HttpResult.FAILURE("DEMO环境不允许操作");
+
             User result = userManager.adminSave(user);
             if(result!=null) return HttpResult.SUCCESS();
         }catch (Exception e){
@@ -62,7 +66,9 @@ public class UserAdminController {
     @ResponseBody
     public HttpResult up(@RequestBody User user) {
         try{
-            if("demo".equals(DWSurveyConfig.DWSURVEY_SITE)) return HttpResult.FAILURE("can not operate under demo environment");
+
+            if("demo".equals(DWSurveyConfig.DWSURVEY_SITE)) return HttpResult.FAILURE("DEMO环境不允许操作");
+
             HttpResult httpResult = userManager.upData(user);
             return httpResult;
         }catch (Exception e){

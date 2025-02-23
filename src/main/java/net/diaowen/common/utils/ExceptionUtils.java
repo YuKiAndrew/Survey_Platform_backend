@@ -1,3 +1,4 @@
+
 /**
  * Copyright (c) 2005-2011 springside.org.cn
  *
@@ -19,3 +20,4 @@ public class ExceptionUtils {
 		return new RuntimeException(e.getMessage(), e);
 	}
 }
+

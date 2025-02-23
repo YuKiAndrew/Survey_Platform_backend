@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service;
 
 import net.diaowen.common.service.BaseService;
@@ -6,9 +7,9 @@ import net.diaowen.dwsurvey.entity.AnAnswer;
 
 /**
  * 答卷业务
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 
@@ -17,3 +18,4 @@ public interface AnAnswerManager extends BaseService<AnAnswer, String> {
 
 	public void findGroupStats(Question question);
 }
+

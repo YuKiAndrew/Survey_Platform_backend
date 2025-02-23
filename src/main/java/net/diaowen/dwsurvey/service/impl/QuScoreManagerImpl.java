@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import java.util.ArrayList;
@@ -23,10 +24,10 @@ import javax.persistence.criteria.Root;
 
 /**
  * 评分题
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
- * 
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service
 public class QuScoreManagerImpl extends BaseServiceImpl<QuScore, String> implements QuScoreManager {
@@ -126,3 +127,4 @@ public class QuScoreManagerImpl extends BaseServiceImpl<QuScore, String> impleme
 		quScoreDao.save(quScore);
 	}
 }
+

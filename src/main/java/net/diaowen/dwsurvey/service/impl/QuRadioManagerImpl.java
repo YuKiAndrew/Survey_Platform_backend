@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import java.util.ArrayList;
@@ -21,8 +22,11 @@ import javax.persistence.criteria.Root;
 
 
 /**
- * @author ymx
+ * 单选题
+ * @author keyuan(keyuan258@gmail.com)
  *
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service("quRadioManager")
 public class QuRadioManagerImpl extends BaseServiceImpl<QuRadio, String> implements QuRadioManager {
@@ -140,3 +144,4 @@ public class QuRadioManagerImpl extends BaseServiceImpl<QuRadio, String> impleme
 		quRadioDao.save(quRadio);
 	}
 }
+

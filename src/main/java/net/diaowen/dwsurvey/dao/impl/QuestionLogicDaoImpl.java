@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao.impl;
 
 import net.diaowen.dwsurvey.entity.QuestionLogic;
@@ -8,9 +9,9 @@ import net.diaowen.dwsurvey.dao.QuestionLogicDao;
 
 /**
  * 题逻辑 dao
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 
@@ -18,3 +19,4 @@ import net.diaowen.dwsurvey.dao.QuestionLogicDao;
 public class QuestionLogicDaoImpl extends BaseDaoImpl<QuestionLogic, String> implements QuestionLogicDao{
 	
 }
+

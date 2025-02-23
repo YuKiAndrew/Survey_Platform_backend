@@ -1,3 +1,4 @@
+
 package net.diaowen.common.service;
 
 import java.io.Serializable;
@@ -9,9 +10,11 @@ import net.diaowen.common.base.entity.IdEntity;
 import net.diaowen.common.plugs.page.Page;
 
 /**
+ * 业务基类接口
+ * @author keyuan(keyuan258@gmail.com)
  *
- * @author YMX
- *
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 public interface BaseService<T extends IdEntity,ID extends Serializable> {
 
@@ -33,3 +36,4 @@ public interface BaseService<T extends IdEntity,ID extends Serializable> {
 
 	public Page<T> findPage(Page<T> page, Criterion... criterion);
 }
+

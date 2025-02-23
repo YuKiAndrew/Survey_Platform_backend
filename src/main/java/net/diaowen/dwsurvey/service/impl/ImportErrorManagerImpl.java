@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import net.diaowen.dwsurvey.entity.ImportError;
@@ -9,10 +10,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 导入错误记录题
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
- * 
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service
 public class ImportErrorManagerImpl implements ImportErrorManager {
@@ -24,3 +25,4 @@ public class ImportErrorManagerImpl implements ImportErrorManager {
     }
     
 }
+

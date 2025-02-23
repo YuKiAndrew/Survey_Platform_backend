@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service.impl;
 
 import net.diaowen.common.utils.ReflectionUtils;
@@ -13,8 +14,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 /**
- * @author ymx
-
+ * 问卷样式
+ * @author keyuan(keyuan258@gmail.com)
+ *
+ * https://github.com/wkeyuan/DWSurvey
+ * http://dwsurvey.net
  */
 @Service
 public class SurveyStyleManagerImpl implements SurveyStyleManager {
@@ -44,3 +48,4 @@ public class SurveyStyleManagerImpl implements SurveyStyleManager {
 	}
 	
 }
+

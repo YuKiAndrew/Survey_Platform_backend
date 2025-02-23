@@ -1,3 +1,4 @@
+
 package net.diaowen.common.plugs.ipaddr;
 
 import java.net.InetAddress;
@@ -25,6 +26,12 @@ public class IPService {
 		}
 		return null;
 	}
+
+	/**
+	 * 根据ip取得所在地区
+	 * @param ip
+	 * @return
+	 */
 	public String getCountry(String ip) {
 		if(ip==null){
 			return "";
@@ -32,13 +39,22 @@ public class IPService {
 		return ipLocationService.getLocationByIp(ip).getProvince();
 	}
 
-
+	/**
+	 * 根据IP，查出此ip所在的城市
+	 *
+	 * @param ip
+	 * @return
+	 */
 	public String getCurCity(String ip) {
 		//空实现
 		return null;
 	}
 
-
+	/**
+	 *
+	 * @param country
+	 * @return
+	 */
 	public String getCurCityByCountry(String country) {
 		return null;
 	}
@@ -61,10 +77,18 @@ public class IPService {
 		if(ip!=null && ip.indexOf(",")>0){
 			ip=ip.substring(0,ip.indexOf(","));
 		}
+		//如果带有端口去掉端口
+		if (ip!=null && ip.indexOf(":")>0) {
+			ip = ip.substring(0, ip.indexOf(":"));
+		}
 		return ip;
 	}
 
-
+	/**
+	 * 检查以localhost,127.0.0.1访问时得到真实IP
+	 * @param ip
+	 * @return
+	 */
 	public String checkLocalIp(String ip){
 		if("0:0:0:0:0:0:0:1".equals(ip) || "127.0.0.1".equals(ip) || "0:0:0:0:0:0:0:1%0".equals(ip)){
 			try {

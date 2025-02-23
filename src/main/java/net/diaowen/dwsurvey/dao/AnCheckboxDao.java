@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.dao;
 
 import java.util.List;
@@ -10,9 +11,9 @@ import net.diaowen.dwsurvey.entity.DataCross;
 
 /**
  * 多选题数据 interface
- * @author ymx
+ * @author KeYuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  *
  */
@@ -26,3 +27,4 @@ public interface AnCheckboxDao extends BaseDao<AnCheckbox, String>{
 	public List<DataCross> findStatsDataChart(Question question);
 
 }
+

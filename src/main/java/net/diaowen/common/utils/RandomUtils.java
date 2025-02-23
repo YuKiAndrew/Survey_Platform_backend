@@ -1,3 +1,4 @@
+
 package net.diaowen.common.utils;
 
 import java.text.SimpleDateFormat;

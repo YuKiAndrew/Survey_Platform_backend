@@ -1,10 +1,11 @@
+
 package net.diaowen.common;
 
 /**
  * YesnoOption
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 public enum YesnoOption {
@@ -55,3 +56,4 @@ public enum YesnoOption {
 	
 	
 }
+

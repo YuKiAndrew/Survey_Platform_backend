@@ -1,3 +1,4 @@
+
 package net.diaowen.dwsurvey.service;
 
 import java.util.List;
@@ -7,9 +8,9 @@ import net.diaowen.dwsurvey.entity.QuMultiFillblank;
 
 /**
  * 多项填空题
- * @author ymx
+ * @author keyuan(keyuan258@gmail.com)
  *
- * 
+ * https://github.com/wkeyuan/DWSurvey
  * http://dwsurvey.net
  */
 public interface QuMultiFillblankManager  extends BaseService<QuMultiFillblank, String>{
