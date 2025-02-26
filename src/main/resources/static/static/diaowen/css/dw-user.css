@@ -1160,41 +1160,41 @@ body{
 .collect_weixin_content{
 	margin: 0px auto;
 }
-.weixinSteps{
-	padding: 10px;
-	background: #EFEFEF;
-	margin: 0px auto;
-	width: 930px;
-}
-.wxinTitle{
-	background: url("../images/img1/weixinlogo.png") no-repeat left;
-	padding: 10px;
-	padding-left: 50px;
-	line-height: 1.4em;
-	font-size: 21px;
-	color: #6b6b6b;
-	display: block;
-}
-.wxinContent{
-	overflow: auto;
-	margin: 0px auto;
-	margin-left: 20px;
-}
-.wxinContent ul{
-	padding: 0px;
-	margin: 0px;
-	list-style: none;
-}
-.wxinContent ul li{
-	float: left;
-	width: 300px;
-}
-.wxinContent ul li span{
-	font-size: 14px;
-}
-.wxinContent ul li img{
-	margin-top: 12px;
-}
+/*.weixinSteps{*/
+/*	padding: 10px;*/
+/*	background: #EFEFEF;*/
+/*	margin: 0px auto;*/
+/*	width: 930px;*/
+/*}*/
+/*.wxinTitle{*/
+/*	background: url("../images/img1/weixinlogo.png") no-repeat left;*/
+/*	padding: 10px;*/
+/*	padding-left: 50px;*/
+/*	line-height: 1.4em;*/
+/*	font-size: 21px;*/
+/*	color: #6b6b6b;*/
+/*	display: block;*/
+/*}*/
+/*.wxinContent{*/
+/*	overflow: auto;*/
+/*	margin: 0px auto;*/
+/*	margin-left: 20px;*/
+/*}*/
+/*.wxinContent ul{*/
+/*	padding: 0px;*/
+/*	margin: 0px;*/
+/*	list-style: none;*/
+/*}*/
+/*.wxinContent ul li{*/
+/*	float: left;*/
+/*	width: 300px;*/
+/*}*/
+/*.wxinContent ul li span{*/
+/*	font-size: 14px;*/
+/*}*/
+/*.wxinContent ul li img{*/
+/*	margin-top: 12px;*/
+/*}*/
 
 .scmcsiteLeft{
 	float: left;

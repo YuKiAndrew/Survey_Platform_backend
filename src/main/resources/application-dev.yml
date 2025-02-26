@@ -34,13 +34,13 @@ dwsurvey:
     sendcloud:
       smsUser:
       smsKey:
-  weixin:
-    open: false
-    app-id: x
-    app-secret: x
-    server:
-      token:
-      encodingAESKey:
+#  weixin:
+#    open: false
+#    app-id: x
+#    app-secret: x
+#    server:
+#      token:
+#      encodingAESKey:
   dw-open: # 预留配置
     api:
       status: test # test=开发测试模式，不进行API验证；prod=生产模式；验证签名，disable=关闭API功能

@@ -7,7 +7,7 @@ import net.diaowen.common.plugs.httpclient.HttpStatus;
 import net.diaowen.common.plugs.ipaddr.IPService;
 import net.diaowen.common.plugs.security.FormAuthenticationWithLockFilter;
 import net.diaowen.common.plugs.sms.SmsService;
-import net.diaowen.common.plugs.weixin.WeixinMpService;
+//import net.diaowen.common.plugs.weixin.WeixinMpService;
 import net.diaowen.common.utils.RandomUtils;
 import net.diaowen.common.utils.security.RSAUtils;
 import net.diaowen.dwsurvey.common.RoleCode;
@@ -56,8 +56,8 @@ public class SecurityController {
     private RandomCodeManager randomCodeManager;
     @Autowired
     private SysLogManager sysLogManager;
-    @Autowired
-    private WeixinMpService weixinMpService;
+//    @Autowired
+//    private WeixinMpService weixinMpService;
     @Autowired
     private SmsService smsService;
     @Autowired
@@ -357,26 +357,26 @@ public class SecurityController {
     }
 
 
-    /**
-     * 关注公众号二维码
-     * @return
-     */
-    @RequestMapping("/wx-login-qrcode.do")
-    @ResponseBody
-    public HttpResult wxLoginQRCode(HttpServletRequest request) {
-        try{
-            if (!DWSurveyConfig.DWSURVEY_WEIXIN_OPEN) return HttpResult.SUCCESS("微信服务未开启");
-            String sessionId = request.getSession().getId();
-            if(StringUtils.isNotEmpty(DWSurveyConfig.DWSURVEY_WEIXIN_APP_ID)){
-                String ticket = weixinMpService.QRcodeTicket(WeixinMpService.USER_LOGIN_WEIXIN+"_"+sessionId);
-                return  HttpResult.SUCCESS(ticket);
-            }
-            return HttpResult.FAILURE("未配置微信APPID");
-        }catch (Exception e){
-            e.printStackTrace();
-            return HttpResult.FAILURE_MSG(e.getMessage());
-        }
-    }
+//    /**
+//     * 关注公众号二维码
+//     * @return
+//     */
+//    @RequestMapping("/wx-login-qrcode.do")
+//    @ResponseBody
+//    public HttpResult wxLoginQRCode(HttpServletRequest request) {
+//        try{
+//            if (!DWSurveyConfig.DWSURVEY_WEIXIN_OPEN) return HttpResult.SUCCESS("微信服务未开启");
+//            String sessionId = request.getSession().getId();
+//            if(StringUtils.isNotEmpty(DWSurveyConfig.DWSURVEY_WEIXIN_APP_ID)){
+//                String ticket = weixinMpService.QRcodeTicket(WeixinMpService.USER_LOGIN_WEIXIN+"_"+sessionId);
+//                return  HttpResult.SUCCESS(ticket);
+//            }
+//            return HttpResult.FAILURE("未配置微信APPID");
+//        }catch (Exception e){
+//            e.printStackTrace();
+//            return HttpResult.FAILURE_MSG(e.getMessage());
+//        }
+//    }
 
     /**
      * 关注公众号后，自动登录

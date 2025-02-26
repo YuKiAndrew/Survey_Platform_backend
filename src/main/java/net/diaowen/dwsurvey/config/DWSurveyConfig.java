@@ -18,12 +18,12 @@ public class DWSurveyConfig {
     public static Boolean DWSURVEY_WEB_LOGIN_PWD = null;
     public static Boolean DWSURVEY_WEB_REGISTER = null;
 
-    public static Boolean DWSURVEY_WEIXIN_OPEN = false;
-
-    public static String DWSURVEY_WEIXIN_APP_ID = null;
-    public static String DWSURVEY_WEIXIN_APP_SECRET = null;
-    public static String DWSURVEY_WEIXIN_SERVER_TOKEN = null;
-    public static String DWSURVEY_WEIXIN_SERVER_AESKEY = null;
+//    public static Boolean DWSURVEY_WEIXIN_OPEN = false;
+//
+//    public static String DWSURVEY_WEIXIN_APP_ID = null;
+//    public static String DWSURVEY_WEIXIN_APP_SECRET = null;
+//    public static String DWSURVEY_WEIXIN_SERVER_TOKEN = null;
+//    public static String DWSURVEY_WEIXIN_SERVER_AESKEY = null;
 
 
     public static String DWSURVEY_SMS_CODE_OPEN = null;
@@ -91,32 +91,32 @@ public class DWSurveyConfig {
         DWSurveyConfig.DWSURVEY_WEB_RESOURCE_URL = dwsurveyWebResourceUrl;
     }
 
-    @Value("${dwsurvey.weixin.open}")
-    public void setDwsurveyWeixinOpen(boolean dwsurveyWeixinOpen) {
-        DWSURVEY_WEIXIN_OPEN = dwsurveyWeixinOpen;
+//    @Value("${dwsurvey.weixin.open}")
+//    public void setDwsurveyWeixinOpen(boolean dwsurveyWeixinOpen) {
+//        DWSURVEY_WEIXIN_OPEN = dwsurveyWeixinOpen;
+//
+//    }
 
-    }
 
-
-    @Value("${dwsurvey.weixin.app-id}")
-    public void setWeixinAppId(String weixinAppId) {
-        DWSurveyConfig.DWSURVEY_WEIXIN_APP_ID = weixinAppId;
-    }
-
-    @Value("${dwsurvey.weixin.app-secret}")
-    public void setWeixinAppSecret(String weixinAppSecret) {
-        DWSurveyConfig.DWSURVEY_WEIXIN_APP_SECRET = weixinAppSecret;
-    }
-
-    @Value("${dwsurvey.weixin.server.token}")
-    public void setDwsurveyWeixinServerToken(String weixinServerToken) {
-        DWSurveyConfig.DWSURVEY_WEIXIN_SERVER_TOKEN = weixinServerToken;
-    }
-
-    @Value("${dwsurvey.weixin.server.encodingAESKey}")
-    public void setDwsurveyWeixinServerAeskey(String weixinAppSecret) {
-        DWSurveyConfig.DWSURVEY_WEIXIN_SERVER_AESKEY = weixinAppSecret;
-    }
+//    @Value("${dwsurvey.weixin.app-id}")
+//    public void setWeixinAppId(String weixinAppId) {
+//        DWSurveyConfig.DWSURVEY_WEIXIN_APP_ID = weixinAppId;
+//    }
+//
+//    @Value("${dwsurvey.weixin.app-secret}")
+//    public void setWeixinAppSecret(String weixinAppSecret) {
+//        DWSurveyConfig.DWSURVEY_WEIXIN_APP_SECRET = weixinAppSecret;
+//    }
+//
+//    @Value("${dwsurvey.weixin.server.token}")
+//    public void setDwsurveyWeixinServerToken(String weixinServerToken) {
+//        DWSurveyConfig.DWSURVEY_WEIXIN_SERVER_TOKEN = weixinServerToken;
+//    }
+//
+//    @Value("${dwsurvey.weixin.server.encodingAESKey}")
+//    public void setDwsurveyWeixinServerAeskey(String weixinAppSecret) {
+//        DWSurveyConfig.DWSURVEY_WEIXIN_SERVER_AESKEY = weixinAppSecret;
+//    }
 
     @Value("${dwsurvey.site}")
     public void setDwsurveyDemo(String dwsurveySite) {
